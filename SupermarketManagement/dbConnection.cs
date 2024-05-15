@@ -9,6 +9,21 @@ namespace SupermarketManagement
 {
     internal class dbConnection
     {
-       
+        public dbConnection()
+        {
+            MySqlConnection mySqlConnection = new MySqlConnection(mysqlCon);
+            try
+            {
+                mySqlConnection.Open();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                mySqlConnection.Close();
+            }
+        }
     }
 }
