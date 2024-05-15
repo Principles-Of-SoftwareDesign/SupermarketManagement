@@ -1,4 +1,3 @@
-using MySql.Data.MySqlClient;
 namespace SupermarketManagement
 {
     public partial class Form1 : Form
