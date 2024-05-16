@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagement
 {
-    internal class Validation
+    internal class Hashing
     {
         public string hashPassword(string password)
         {

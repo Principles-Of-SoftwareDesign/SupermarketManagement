@@ -1,15 +1,14 @@
 using MySql.Data.MySqlClient;
 namespace SupermarketManagement
 {
-    public partial class Form1 : Form
+    public partial class addAdmin : Form
     {
         MySqlConnection conn;
         MySqlCommand cmd;
-        MySqlDataReader reader;
         dbConnection dbConnection = new dbConnection();
-        Validation validation = new Validation();
+        Hashing hashing = new Hashing();
 
-        public Form1()
+        public addAdmin()
         {
             InitializeComponent();
             conn = new MySqlConnection(dbConnection.connect());
@@ -22,7 +21,7 @@ namespace SupermarketManagement
 
         private void addAdminBtn_Click(object sender, EventArgs e)
         {
-            string hashedPassword = validation.hashPassword(passwordTxt.Text);
+            string hashedPassword = hashing.hashPassword(passwordTxt.Text);
 
             if ((nameTxt.Text == string.Empty) || (emailTxt.Text == string.Empty) || (numberTxt.Text == string.Empty) || (passwordTxt.Text == string.Empty))
             {
@@ -41,7 +40,9 @@ namespace SupermarketManagement
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    MessageBox.Show("Added Successfully", "Add Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    viewAdmins viewAdmins = new viewAdmins();
+                    viewAdmins.Show();
+
                 }
                 else
                 {
@@ -52,8 +53,9 @@ namespace SupermarketManagement
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
 
-
-
+        }
     }
 }

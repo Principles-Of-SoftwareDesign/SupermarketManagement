@@ -1,6 +1,6 @@
 ﻿namespace SupermarketManagement
 {
-    partial class Form1
+    partial class addAdmin
     {
         /// <summary>
         ///  Required designer variable.
@@ -38,12 +38,6 @@
             passwordLabel = new Label();
             addAdminBtn = new Button();
             panel1 = new Panel();
-            dataGridView1 = new DataGridView();
-            idClumn = new DataGridViewTextBoxColumn();
-            nameColumn = new DataGridViewTextBoxColumn();
-            emailColumn = new DataGridViewTextBoxColumn();
-            phoneNumberColumn = new DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // nameTxt
@@ -133,58 +127,13 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1279, 67);
             panel1.TabIndex = 11;
+            panel1.Paint += panel1_Paint;
             // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idClumn, nameColumn, emailColumn, phoneNumberColumn });
-            dataGridView1.Location = new Point(607, 106);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(616, 484);
-            dataGridView1.TabIndex = 12;
-            // 
-            // idClumn
-            // 
-            idClumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            idClumn.HeaderText = "#ID";
-            idClumn.MinimumWidth = 6;
-            idClumn.Name = "idClumn";
-            idClumn.ReadOnly = true;
-            // 
-            // nameColumn
-            // 
-            nameColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            nameColumn.HeaderText = "Name";
-            nameColumn.MinimumWidth = 6;
-            nameColumn.Name = "nameColumn";
-            nameColumn.ReadOnly = true;
-            // 
-            // emailColumn
-            // 
-            emailColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            emailColumn.HeaderText = "Email";
-            emailColumn.MinimumWidth = 6;
-            emailColumn.Name = "emailColumn";
-            emailColumn.ReadOnly = true;
-            // 
-            // phoneNumberColumn
-            // 
-            phoneNumberColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            phoneNumberColumn.HeaderText = "PhoneNumber";
-            phoneNumberColumn.MinimumWidth = 6;
-            phoneNumberColumn.Name = "phoneNumberColumn";
-            phoneNumberColumn.ReadOnly = true;
-            // 
-            // Form1
+            // addAdmin
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1280, 698);
-            Controls.Add(dataGridView1);
             Controls.Add(panel1);
             Controls.Add(addAdminBtn);
             Controls.Add(passwordTxt);
@@ -197,10 +146,9 @@
             Controls.Add(nameLabel);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            Name = "Form1";
+            Name = "addAdmin";
             Text = "Add Admin";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -217,10 +165,5 @@
         private Label passwordLabel;
         private Button addAdminBtn;
         private Panel panel1;
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn idClumn;
-        private DataGridViewTextBoxColumn nameColumn;
-        private DataGridViewTextBoxColumn emailColumn;
-        private DataGridViewTextBoxColumn phoneNumberColumn;
     }
 }
