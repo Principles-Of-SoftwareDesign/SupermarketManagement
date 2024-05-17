@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+
 namespace SupermarketManagement
 {
     public partial class addAdmin : Form
@@ -12,11 +13,6 @@ namespace SupermarketManagement
         {
             InitializeComponent();
             conn = new MySqlConnection(dbConnection.connect());
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void addAdminBtn_Click(object sender, EventArgs e)
@@ -40,8 +36,9 @@ namespace SupermarketManagement
                 int rowsAffected = cmd.ExecuteNonQuery();
                 if (rowsAffected > 0)
                 {
-                    viewAdmins viewAdmins = new viewAdmins();
+                    ViewAdmins viewAdmins = new ViewAdmins();
                     viewAdmins.Show();
+                    this.Hide();
 
                 }
                 else
@@ -51,11 +48,6 @@ namespace SupermarketManagement
                 conn.Close();
 
             }
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
