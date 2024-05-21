@@ -194,7 +194,6 @@
         }
 
         #endregion
-
         private TextBox nameTxt;
         private Label nameLabel;
         private TextBox emailTxt;

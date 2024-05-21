@@ -22,7 +22,7 @@ namespace SupermarketManagement
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["id"].ToString(), reader["name"].ToString(), reader["email"].ToString(), reader["phone_number"].ToString());
+                dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["name"].ToString(), reader["email"].ToString(), reader["phone_number"].ToString());
             }
             reader.Close();
             conn.Close();

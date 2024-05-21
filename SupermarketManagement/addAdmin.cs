@@ -15,6 +15,7 @@ namespace SupermarketManagement
             conn = new MySqlConnection(dbConnection.connect());
         }
 
+        //hide password + make validations////
         private void addAdminBtn_Click(object sender, EventArgs e)
         {
             string hashedPassword = hashing.hashPassword(passwordTxt.Text);
