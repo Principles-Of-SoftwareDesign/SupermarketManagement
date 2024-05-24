@@ -49,7 +49,6 @@
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idColumn, nameColumn, emailColumn, numberColumn });
             dataGridView1.Location = new Point(375, 25);
             dataGridView1.Margin = new Padding(4);
-            dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(918, 522);

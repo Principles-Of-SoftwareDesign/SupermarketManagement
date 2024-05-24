@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using SupermarketManagement.Config;
 
 namespace SupermarketManagement
 {
@@ -28,7 +29,7 @@ namespace SupermarketManagement
             else
             {
                 conn.Open();
-                cmd = new MySqlCommand("INSERT INTO admin (name,email,phone_number,password) VALUES  (@Name,@email,@phone_number,@password)", conn);
+                cmd = new MySqlCommand("INSERT INTO users (name,email,phone_number,password, role) VALUES  (@Name,@email,@phone_number,@password, 1)", conn);
                 cmd.Parameters.Clear();
                 cmd.Parameters.AddWithValue("@Name", nameTxt.Text);
                 cmd.Parameters.AddWithValue("@phone_number", numberTxt.Text);

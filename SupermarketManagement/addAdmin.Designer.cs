@@ -37,11 +37,11 @@
             passwordTxt = new TextBox();
             passwordLabel = new Label();
             addAdminBtn = new Button();
-            panel1 = new Panel();
-            viewAdminsLabel = new Label();
-            addAdminLabel = new Label();
-            label1 = new Label();
-            panel1.SuspendLayout();
+            AdminNavbar = new TabControl();
+            home = new TabPage();
+            ViewAdmins = new TabPage();
+            adding = new TabPage();
+            AdminNavbar.SuspendLayout();
             SuspendLayout();
             // 
             // nameTxt
@@ -124,56 +124,52 @@
             addAdminBtn.UseVisualStyleBackColor = false;
             addAdminBtn.Click += addAdminBtn_Click;
             // 
-            // panel1
+            // AdminNavbar
             // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(viewAdminsLabel);
-            panel1.Controls.Add(addAdminLabel);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(-2, 0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(239, 706);
-            panel1.TabIndex = 11;
+            AdminNavbar.Controls.Add(home);
+            AdminNavbar.Controls.Add(ViewAdmins);
+            AdminNavbar.Controls.Add(adding);
+            AdminNavbar.Dock = DockStyle.Top;
+            AdminNavbar.Location = new Point(0, 0);
+            AdminNavbar.Name = "AdminNavbar";
+            AdminNavbar.SelectedIndex = 0;
+            AdminNavbar.Size = new Size(1280, 47);
+            AdminNavbar.TabIndex = 12;
             // 
-            // viewAdminsLabel
+            // home
             // 
-            viewAdminsLabel.AutoSize = true;
-            viewAdminsLabel.ForeColor = Color.White;
-            viewAdminsLabel.Location = new Point(63, 303);
-            viewAdminsLabel.Margin = new Padding(4, 0, 4, 0);
-            viewAdminsLabel.Name = "viewAdminsLabel";
-            viewAdminsLabel.Size = new Size(124, 28);
-            viewAdminsLabel.TabIndex = 15;
-            viewAdminsLabel.Text = "View Admins";
+            home.Location = new Point(4, 37);
+            home.Name = "home";
+            home.Padding = new Padding(3);
+            home.Size = new Size(1272, 6);
+            home.TabIndex = 1;
+            home.Text = "Home";
+            home.UseVisualStyleBackColor = true;
             // 
-            // addAdminLabel
+            // ViewAdmins
             // 
-            addAdminLabel.AutoSize = true;
-            addAdminLabel.ForeColor = Color.White;
-            addAdminLabel.Location = new Point(63, 197);
-            addAdminLabel.Margin = new Padding(4, 0, 4, 0);
-            addAdminLabel.Name = "addAdminLabel";
-            addAdminLabel.Size = new Size(112, 28);
-            addAdminLabel.TabIndex = 14;
-            addAdminLabel.Text = "Add Admin";
+            ViewAdmins.Location = new Point(4, 37);
+            ViewAdmins.Name = "ViewAdmins";
+            ViewAdmins.Size = new Size(1272, 6);
+            ViewAdmins.TabIndex = 2;
+            ViewAdmins.Text = "View Admins";
+            ViewAdmins.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // adding
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(82, 107);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(65, 28);
-            label1.TabIndex = 13;
-            label1.Text = "Home";
+            adding.Location = new Point(4, 37);
+            adding.Name = "adding";
+            adding.Size = new Size(1272, 6);
+            adding.TabIndex = 3;
+            adding.Text = "Add Admin";
+            adding.UseVisualStyleBackColor = true;
             // 
             // addAdmin
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1280, 698);
-            Controls.Add(panel1);
+            Controls.Add(AdminNavbar);
             Controls.Add(addAdminBtn);
             Controls.Add(passwordTxt);
             Controls.Add(passwordLabel);
@@ -187,8 +183,7 @@
             Margin = new Padding(4);
             Name = "addAdmin";
             Text = "Add Admin";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            AdminNavbar.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -203,9 +198,9 @@
         private TextBox passwordTxt;
         private Label passwordLabel;
         private Button addAdminBtn;
-        private Panel panel1;
-        private Label label1;
-        private Label viewAdminsLabel;
-        private Label addAdminLabel;
+        private TabControl AdminNavbar;
+        private TabPage home;
+        private TabPage ViewAdmins;
+        private TabPage adding;
     }
 }
