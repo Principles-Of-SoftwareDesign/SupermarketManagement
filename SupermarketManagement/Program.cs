@@ -19,7 +19,7 @@ namespace SupermarketManagement
             IAdminRepository repo = new AdminRepository();
             IViewAdmins view = new ViewAdmins();
             new AdminPresenter(view, repo);
-            Application.Run((ViewAdmins)view);
+            Application.Run(new Category());
 
         }
     }
