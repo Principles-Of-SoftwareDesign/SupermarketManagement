@@ -27,7 +27,27 @@ namespace SupermarketManagement
             conn = new MySqlConnection(dbconn.connect());
         }
 
-        
+        private void Category_Load(object sender, EventArgs e)
+        {
+            LoadRecord();
+        }
+
+        private void LoadRecord()
+        {
+            dataGridView1.Rows.Clear();
+            conn.Open();
+            cmd = new MySqlCommand("SELECT * FROM `category`", conn);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                //dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["id"].ToString(), reader["name"].ToString());
+
+                dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["name"].ToString());
+
+            }
+            reader.Close();
+            conn.Close();
+        }
 
         public void Clear()
         {
@@ -61,7 +81,7 @@ namespace SupermarketManagement
 
 
                 conn.Close();
-            
+                LoadRecord();
                 Clear();
             }
         }
