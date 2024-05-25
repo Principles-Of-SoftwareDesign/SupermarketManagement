@@ -134,7 +134,6 @@
             Controls.Add(label1);
             Name = "Category";
             Text = "Category";
-            Load += Category_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
