@@ -28,63 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
-            idColumn = new DataGridViewTextBoxColumn();
-            nameColumn = new DataGridViewTextBoxColumn();
-            emailColumn = new DataGridViewTextBoxColumn();
-            numberColumn = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             viewAdminsLabel = new Label();
             addAdminLabel = new Label();
             label1 = new Label();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            dataGridView1 = new DataGridView();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.AllowUserToDeleteRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { idColumn, nameColumn, emailColumn, numberColumn });
-            dataGridView1.Location = new Point(375, 25);
-            dataGridView1.Margin = new Padding(4);
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(918, 522);
-            dataGridView1.TabIndex = 13;
-            // 
-            // idColumn
-            // 
-            idColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            idColumn.HeaderText = "#ID";
-            idColumn.MinimumWidth = 6;
-            idColumn.Name = "idColumn";
-            idColumn.ReadOnly = true;
-            // 
-            // nameColumn
-            // 
-            nameColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            nameColumn.HeaderText = "Name";
-            nameColumn.MinimumWidth = 6;
-            nameColumn.Name = "nameColumn";
-            nameColumn.ReadOnly = true;
-            // 
-            // emailColumn
-            // 
-            emailColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            emailColumn.HeaderText = "Email";
-            emailColumn.MinimumWidth = 6;
-            emailColumn.Name = "emailColumn";
-            emailColumn.ReadOnly = true;
-            // 
-            // numberColumn
-            // 
-            numberColumn.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            numberColumn.HeaderText = "PhoneNumber";
-            numberColumn.MinimumWidth = 6;
-            numberColumn.Name = "numberColumn";
-            numberColumn.ReadOnly = true;
             // 
             // panel1
             // 
@@ -131,34 +82,38 @@
             label1.TabIndex = 13;
             label1.Text = "Home";
             // 
+            // dataGridView1
+            // 
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(369, 37);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.Size = new Size(942, 505);
+            dataGridView1.TabIndex = 15;
+            // 
             // ViewAdmins
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1347, 590);
-            Controls.Add(panel1);
             Controls.Add(dataGridView1);
+            Controls.Add(panel1);
             Font = new Font("Segoe UI", 12F);
             Margin = new Padding(4);
             Name = "ViewAdmins";
             Text = "viewAdmins";
             Load += ViewAdmins_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn idColumn;
-        private DataGridViewTextBoxColumn nameColumn;
-        private DataGridViewTextBoxColumn emailColumn;
-        private DataGridViewTextBoxColumn numberColumn;
         private Panel panel1;
         private Label viewAdminsLabel;
         private Label addAdminLabel;
         private Label label1;
+        private DataGridView dataGridView1;
     }
 }

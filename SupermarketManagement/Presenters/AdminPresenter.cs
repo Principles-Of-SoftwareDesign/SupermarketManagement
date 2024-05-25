@@ -7,6 +7,7 @@ using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 using SupermarketManagement.Models;
 using SupermarketManagement.Views;
+using SupermarketManagement.Repositories;
 
 namespace SupermarketManagement.Presenters
 {

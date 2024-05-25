@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SupermarketManagement.Models;
 
-namespace SupermarketManagement.Models
+namespace SupermarketManagement.Repositories
 {
-    //Dependency Inversion Principle (Depends on abstraction)
+    //Repository Pattern
     public interface IAdminRepository
     {
         void addAdmin(AdminModel adminModel);
         void EditAdmin(AdminModel adminModel);
+
         IEnumerable<AdminModel> GetAllAdmins();
 
     }

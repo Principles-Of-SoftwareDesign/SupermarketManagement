@@ -40,6 +40,7 @@ namespace SupermarketManagement.Repositories
             while (reader.Read())
             {
                 var adminModel = new AdminModel();
+                adminModel.Id = (int)reader["id"];
                 adminModel.Name = reader["name"].ToString();
                 adminModel.Email = reader["email"].ToString();
                 adminModel.PhoneNumber = reader["phone_number"].ToString();

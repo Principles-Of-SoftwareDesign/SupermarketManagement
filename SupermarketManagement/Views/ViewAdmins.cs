@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using SupermarketManagement.Views;
 using SupermarketManagement.Presenters;
+using System.Windows.Forms;
 
 namespace SupermarketManagement
 {
@@ -41,6 +42,16 @@ namespace SupermarketManagement
 
         public void setAdminsList(BindingSource adminsList)
         {
+
+            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.Columns.Clear();
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "Id", DataPropertyName = "Id", HeaderText = "ID#" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "Name", DataPropertyName = "Name", HeaderText = "Name" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "Email", DataPropertyName = "Email", HeaderText = "Email" });
+            dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "PhoneNumber", DataPropertyName = "PhoneNumber", HeaderText = "Phone Number" });
+
             dataGridView1.DataSource = adminsList;
         }
 
