@@ -181,7 +181,6 @@
             Controls.Add(nameLabel);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            Name = "addAdmin";
             Text = "Add Admin";
             AdminNavbar.ResumeLayout(false);
             ResumeLayout(false);
