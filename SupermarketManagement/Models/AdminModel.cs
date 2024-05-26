@@ -1,47 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SupermarketManagement.Models
 {
-    public class AdminModel
+    public class AdminModel:UserModel
     {
-        private int id;
-        private string name;
-        private string email;
-        private string password;
-        private string phoneNumber;
-
-        public int Id
+        public AdminModel()
         {
-            get { return id; }
-            set { id = value; }
+            Role = 1; // Set the role to "admin"
         }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
+        private List<CategoryModel> categories = new List<CategoryModel>();
 
-        public string Email
+        public List<CategoryModel> Categories
         {
-            get { return email; }
-            set { email = value; }
-        }
-
-        public string Password
-        {
-            get { return password; }
-            set { password = value; }
-        }
-
-        public string PhoneNumber
-        {
-            get { return phoneNumber; }
-            set { phoneNumber = value; }
+            get { return categories; }
+            set { categories = value; }
         }
     }
 }

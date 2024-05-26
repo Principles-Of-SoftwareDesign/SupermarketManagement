@@ -34,12 +34,6 @@ namespace SupermarketManagement
             set { PhoneNumber = value; }
         }
 
-        public event EventHandler AddEvent;
-        public event EventHandler ViewEvent;
-        public event EventHandler EditEvent;
-
-
-
         public void setAdminsList(BindingSource adminsList)
         {
 
@@ -54,7 +48,7 @@ namespace SupermarketManagement
 
             dataGridView1.DataSource = adminsList;
         }
-
+       
         private void ViewAdmins_Load(object sender, EventArgs e)
         {
             //LoadAllList();

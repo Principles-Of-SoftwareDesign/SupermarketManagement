@@ -15,14 +15,8 @@ namespace SupermarketManagement.Views
         public string Password { get; set; }
         public string PhoneNumber { get; set; }
 
-        //Events
-        event EventHandler AddEvent;
-        event EventHandler ViewEvent;
-        event EventHandler EditEvent;
-
         //Methods (For Forms)
         void setAdminsList(BindingSource adminsList);
-        //void show();
     }
     
 }

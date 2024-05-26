@@ -1,24 +1,41 @@
 using MySql.Data.MySqlClient;
 using SupermarketManagement.Config;
+using SupermarketManagement.Presenters;
+using SupermarketManagement.Views;
 
 namespace SupermarketManagement
 {
-    public partial class addAdmin : Form
+    public partial class AddAdminView : Form, IAddAdminView
     {
-        MySqlConnection conn;
-        MySqlCommand cmd;
-        dbConnection dbConnection = new dbConnection();
-        Hashing hashing = new Hashing();
+        private AddAdminPresenter presenter;
+        private IViewAdmins viewAdmins;
 
-        public addAdmin()
+        public AddAdminView()
         {
             InitializeComponent();
-            conn = new MySqlConnection(dbConnection.connect());
+            presenter = new AddAdminPresenter(this);
+        }
+
+        public string Name => nameTxt.Text;
+        public string Email => emailTxt.Text;
+        public string PhoneNumber => numberTxt.Text;
+        public string Password => passwordTxt.Text;
+
+        public void CloseForm()
+        {
+            this.Hide();
+            new AddAdminView();
+        }
+
+        public void ShowMessage(string message, string title)
+        {
+            MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         //hide password + make validations////
         private void addAdminBtn_Click(object sender, EventArgs e)
         {
-           }
+            presenter.addAdmin();
+        }
     }
 }

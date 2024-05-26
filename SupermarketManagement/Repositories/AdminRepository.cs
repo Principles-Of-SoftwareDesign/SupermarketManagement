@@ -20,12 +20,6 @@ namespace SupermarketManagement.Repositories
         {
             this.connection = new MySqlConnection(dbconnection.connect());
         }
-
-        public void addAdmin(AdminModel adminModel)
-        {
-            throw new NotImplementedException();
-        }
-
         public void EditAdmin(AdminModel adminModel)
         {
             throw new NotImplementedException();
@@ -51,6 +45,23 @@ namespace SupermarketManagement.Repositories
 
             return admins;
         }
+
+        public bool addAdmin(AdminModel admin)
+        {
+            connection.Open();
+            var cmd = new MySqlCommand("INSERT INTO users (name, email, phone_number, password, role) VALUES (@Name, @Email, @PhoneNumber, @Password, @Role)", connection);
+            cmd.Parameters.AddWithValue("@Name", admin.Name);
+            cmd.Parameters.AddWithValue("@Email", admin.Email);
+            cmd.Parameters.AddWithValue("@PhoneNumber", admin.PhoneNumber);
+            cmd.Parameters.AddWithValue("@Password", admin.Password);
+            cmd.Parameters.AddWithValue("@Role", admin.Role);
+
+            int rowsAffected = cmd.ExecuteNonQuery();
+            connection.Close();
+
+            return rowsAffected > 0;
+        }
+
     }
 }
 

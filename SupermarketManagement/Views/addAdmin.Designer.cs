@@ -1,6 +1,6 @@
 ﻿namespace SupermarketManagement
 {
-    partial class addAdmin
+    partial class AddAdminView
     {
         /// <summary>
         ///  Required designer variable.

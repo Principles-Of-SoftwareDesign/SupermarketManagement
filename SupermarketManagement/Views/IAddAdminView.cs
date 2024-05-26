@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 namespace SupermarketManagement.Views
 {
-    public interface IAddAdmin
+    public interface IAddAdminView
     {
         string Name { get; }
         string Email { get; }

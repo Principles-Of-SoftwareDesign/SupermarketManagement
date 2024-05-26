@@ -18,11 +18,11 @@ namespace SupermarketManagement
             ApplicationConfiguration.Initialize();
             IAdminRepository repo = new AdminRepository();
             IViewAdmins view = new ViewAdmins();
-            new AdminPresenter(view, repo);
+            new ViewAdminsPresenter(view, repo);
             //Application.Run(new Category());
             //Application.Run((ViewAdmins)view);
             //Application.Run(new CashierView());
-            Application.Run(new addAdmin());
+            Application.Run(new AddAdminView());
 
         }
     }

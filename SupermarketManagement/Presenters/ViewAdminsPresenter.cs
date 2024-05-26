@@ -11,13 +11,15 @@ using SupermarketManagement.Repositories;
 
 namespace SupermarketManagement.Presenters
 {
-    public class AdminPresenter
+    public class ViewAdminsPresenter
     {
         private BindingSource adminBindingSource;
         private IViewAdmins viewAdmins;
         private IAdminRepository adminRepository;
         private IEnumerable<AdminModel> admins;
-        public AdminPresenter(IViewAdmins viewAdmins, IAdminRepository adminRepository)
+
+        
+        public ViewAdminsPresenter(IViewAdmins viewAdmins, IAdminRepository adminRepository)
         {
             this.viewAdmins = viewAdmins;
             this.adminRepository = adminRepository;
