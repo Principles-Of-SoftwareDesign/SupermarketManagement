@@ -7,7 +7,7 @@ namespace SupermarketManagement
 {
     public partial class ViewAdmins : Form, IViewAdmins
     {
-       
+
         public ViewAdmins()
         {
             InitializeComponent();
@@ -48,10 +48,20 @@ namespace SupermarketManagement
 
             dataGridView1.DataSource = adminsList;
         }
-       
+
         private void ViewAdmins_Load(object sender, EventArgs e)
         {
             //LoadAllList();
+        }
+
+        private void addAdminLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewAdminsLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
