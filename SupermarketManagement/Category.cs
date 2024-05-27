@@ -26,6 +26,9 @@ namespace SupermarketManagement
         {
             InitializeComponent();
             conn = new MySqlConnection(dbconn.connect());
+
+            //to display all categories when the form loads
+            this.Load += new System.EventHandler(this.Category_Load);
         }
 
         private void Category_Load(object sender, EventArgs e)
