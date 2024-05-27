@@ -47,7 +47,7 @@
             // 
             button1.BackColor = SystemColors.Highlight;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(301, 363);
+            button1.Location = new Point(294, 374);
             button1.Name = "button1";
             button1.Size = new Size(246, 34);
             button1.TabIndex = 18;
@@ -96,7 +96,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Pristina", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Location = new Point(365, 131);
+            label1.Location = new Point(353, 129);
             label1.Name = "label1";
             label1.Size = new Size(84, 29);
             label1.TabIndex = 13;
@@ -123,17 +123,18 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Capture;
-            pictureBox1.Location = new Point(376, 54);
+            pictureBox1.Location = new Point(365, 45);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(61, 54);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
-            // Form1
+            // login
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(panel2);
@@ -144,8 +145,9 @@
             Controls.Add(txtpassword);
             Controls.Add(txtUserName);
             Controls.Add(pictureBox1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "login";
+            Text = "login";
+            Load += this.login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
