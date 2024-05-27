@@ -67,7 +67,20 @@ namespace SupermarketManagement.Presenters
                 view.ShowMessage("Record update failed!", "Edit Category");
             }
         }
+        public void DeleteCategory()
+        {
+            int categoryId = int.Parse(view.CategoryId);
 
+            if (repository.DeleteCategory(categoryId))
+            {
+                view.ShowMessage("Record deleted successfully!", "Delete Category");
+                LoadCategories();
+            }
+            else
+            {
+                view.ShowMessage("Record delete failed!", "Delete Category");
+            }
+        }
 
         public void SelectCategory(int rowIndex, DataGridView dataGridView)
         {

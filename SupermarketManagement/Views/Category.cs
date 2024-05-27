@@ -178,10 +178,11 @@ namespace SupermarketManagement
             //    MessageBox.Show("Record delete failed!", "Delete Category", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //}
 
-
             //conn.Close();
             ////LoadRecord();
             //clear();
+
+            presenter.DeleteCategory();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

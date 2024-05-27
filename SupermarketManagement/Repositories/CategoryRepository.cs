@@ -66,6 +66,16 @@ namespace SupermarketManagement.Repositories
             connection.Close();
             return i > 0;
         }
+        public bool DeleteCategory(int categoryId)
+        {
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM `category` WHERE `category_id`=@category_id", connection);
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@category_id", categoryId);
+            int result = cmd.ExecuteNonQuery();
+            connection.Close();
+            return result > 0;
+        }
 
     }
 }
