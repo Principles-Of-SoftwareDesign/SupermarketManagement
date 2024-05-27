@@ -3,16 +3,14 @@ using SupermarketManagement.Views;
 using SupermarketManagement.Presenters;
 using System.Windows.Forms;
 
-namespace SupermarketManagement
+namespace SupermarketManagement.Views
 {
-    public partial class ViewAdmins : Form, IViewAdmins
+    public partial class ViewCashiers : Form, IViewCashiers
     {
-
-        public ViewAdmins()
+        public ViewCashiers()
         {
             InitializeComponent();
         }
-
         public int Id
         {
             get { return Id; }
@@ -34,7 +32,7 @@ namespace SupermarketManagement
             set { PhoneNumber = value; }
         }
 
-        public void setAdminsList(BindingSource adminsList)
+        public void setCashiersList(BindingSource cashiersList)
         {
 
             dataGridView1.AutoGenerateColumns = false;
@@ -46,22 +44,28 @@ namespace SupermarketManagement
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "Email", DataPropertyName = "Email", HeaderText = "Email" });
             dataGridView1.Columns.Add(new DataGridViewTextBoxColumn { Name = "PhoneNumber", DataPropertyName = "PhoneNumber", HeaderText = "Phone Number" });
 
-            dataGridView1.DataSource = adminsList;
+            dataGridView1.DataSource = cashiersList;
         }
 
-        private void ViewAdmins_Load(object sender, EventArgs e)
+        private void ViewCashiers_Load(object sender, EventArgs e)
         {
             //LoadAllList();
         }
 
-        private void addAdminLabel_Click(object sender, EventArgs e)
+        private void addCashierLabel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void viewAdminsLabel_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewCashierLabel_Click(object sender, EventArgs e)
         {
 
         }
     }
 }
+

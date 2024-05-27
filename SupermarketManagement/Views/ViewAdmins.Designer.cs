@@ -59,6 +59,7 @@
             viewAdminsLabel.Size = new Size(124, 28);
             viewAdminsLabel.TabIndex = 15;
             viewAdminsLabel.Text = "View Admins";
+            viewAdminsLabel.Click += viewAdminsLabel_Click;
             // 
             // addAdminLabel
             // 
@@ -70,6 +71,7 @@
             addAdminLabel.Size = new Size(112, 28);
             addAdminLabel.TabIndex = 14;
             addAdminLabel.Text = "Add Admin";
+            addAdminLabel.Click += addAdminLabel_Click;
             // 
             // label1
             // 
