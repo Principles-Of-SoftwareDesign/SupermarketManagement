@@ -12,7 +12,7 @@ namespace SupermarketManagement.Views
         void DisplayCategories(IEnumerable<CategoryModel> categories);
         string CategoryId { get; set; }
         string CategoryName { get; set; }
-
         void ShowMessage(string message, string title);
+        void ClearFields();
     }
 }

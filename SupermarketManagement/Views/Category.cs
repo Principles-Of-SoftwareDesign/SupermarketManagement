@@ -38,6 +38,10 @@ namespace SupermarketManagement
 
             //to display all categories when the form loads
             this.Load += new System.EventHandler(this.Category_Load);
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
         }
 
         private void Category_Load(object sender, EventArgs e)
@@ -82,12 +86,16 @@ namespace SupermarketManagement
         //    conn.Close();
         //}
 
-        public void clear()
+        //public void clear()
+        //{
+        //    txt_id.Clear();
+        //    txt_name.Clear();
+        //}
+        public void ClearFields()
         {
             txt_id.Clear();
             txt_name.Clear();
         }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
             //if ((txt_id.Text == string.Empty) || (txt_name.Text == string.Empty))
