@@ -189,7 +189,6 @@
             Controls.Add(nameTxt);
             Controls.Add(nameLabel);
             Margin = new Padding(4, 4, 4, 4);
-            Name = "AddCashier";
             Text = "AddCashier";
             AdminNavbar.ResumeLayout(false);
             ResumeLayout(false);
