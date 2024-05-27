@@ -21,13 +21,9 @@ namespace SupermarketManagement
             ICashierRepository repo = new CashierRepository();
             IViewCashiers view = new ViewCashiers();
             new ViewCashierPresenter(view, repo);
-            Application.Run(new Category());
-            //Application.Run((ViewAdmins)view);
-            //Application.Run(new CashierView());
-            //Application.Run(new AddAdminView());
-            //Application.Run(new AddCashier());
-            //Application.Run((ViewCashiers)view);
-            //Application.Run(new login());
+            Application.Run(new login());
+           
+
         }
     }
 }
