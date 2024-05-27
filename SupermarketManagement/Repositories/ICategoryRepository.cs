@@ -11,5 +11,6 @@ namespace SupermarketManagement.Repositories
     {
         IEnumerable<CategoryModel> GetAllCategories();
         bool AddCategory(CategoryModel category);
+        bool UpdateCategory(CategoryModel category);
     }
 }

@@ -142,7 +142,7 @@ namespace SupermarketManagement
 
             //cmd.Parameters.AddWithValue("@category_id", txt_id.Text);
             //cmd.Parameters.AddWithValue("@name", txt_name.Text);
-            
+
             //int i = cmd.ExecuteNonQuery();
             //if (i > 0)
             //{
@@ -153,10 +153,11 @@ namespace SupermarketManagement
             //    MessageBox.Show("Record update failed!", "Edit Category", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //}
 
-
             //conn.Close();
             ////LoadRecord();
             //clear();
+
+            presenter.UpdateCategory();
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -185,8 +186,10 @@ namespace SupermarketManagement
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txt_name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            //txt_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            //txt_name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            presenter.SelectCategory(e.RowIndex, dataGridView1);
         }
     }
 }

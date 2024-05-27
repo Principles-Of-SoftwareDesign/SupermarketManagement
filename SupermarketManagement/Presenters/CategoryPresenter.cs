@@ -49,6 +49,33 @@ namespace SupermarketManagement.Presenters
                 view.ShowMessage("Record save failed!", "Add Category");
             }
         }
+        public void UpdateCategory()
+        {
+            var category = new CategoryModel
+            {
+                CategoryID = int.Parse(view.CategoryId),
+                Name = view.CategoryName
+            };
 
+            if (repository.UpdateCategory(category))
+            {
+                view.ShowMessage("Record updated successfully!", "Edit Category");
+                LoadCategories();
+            }
+            else
+            {
+                view.ShowMessage("Record update failed!", "Edit Category");
+            }
+        }
+
+
+        public void SelectCategory(int rowIndex, DataGridView dataGridView)
+        {
+            if (rowIndex >= 0 && rowIndex < dataGridView.Rows.Count)
+            {
+                view.CategoryId = dataGridView.Rows[rowIndex].Cells[0].Value.ToString();
+                view.CategoryName = dataGridView.Rows[rowIndex].Cells[1].Value.ToString();
+            }
+        }
     }
 }

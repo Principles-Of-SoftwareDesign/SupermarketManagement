@@ -48,7 +48,18 @@ namespace SupermarketManagement.Repositories
         {
             connection.Open();
             cmd = new MySqlCommand("INSERT INTO `category`(`category_id`, `name`) VALUES (@category_id, @name)", connection);
-            //cmd.Parameters.Clear();
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@category_id", category.CategoryID);
+            cmd.Parameters.AddWithValue("@name", category.Name);
+            int i = cmd.ExecuteNonQuery();
+            connection.Close();
+            return i > 0;
+        }
+        public bool UpdateCategory(CategoryModel category)
+        {
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("UPDATE `category` SET `name`=@name WHERE `category_id`=@category_id", connection);
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@category_id", category.CategoryID);
             cmd.Parameters.AddWithValue("@name", category.Name);
             int i = cmd.ExecuteNonQuery();
