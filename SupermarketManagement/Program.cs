@@ -22,7 +22,8 @@ namespace SupermarketManagement
             //Application.Run(new Category());
             //Application.Run((ViewAdmins)view);
             //Application.Run(new CashierView());
-            Application.Run(new AddAdminView());
+            //Application.Run(new AddAdminView());
+            Application.Run(new login());
 
         }
     }
