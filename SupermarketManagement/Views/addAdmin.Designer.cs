@@ -48,8 +48,9 @@
             // 
             nameTxt.Location = new Point(538, 144);
             nameTxt.Name = "nameTxt";
-            nameTxt.Size = new Size(327, 34);
+            nameTxt.Size = new Size(327, 39);
             nameTxt.TabIndex = 3;
+            nameTxt.TextChanged += nameTxt_TextChanged;
             // 
             // nameLabel
             // 
@@ -57,7 +58,7 @@
             nameLabel.Location = new Point(364, 144);
             nameLabel.Margin = new Padding(4, 0, 4, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(64, 28);
+            nameLabel.Size = new Size(78, 32);
             nameLabel.TabIndex = 2;
             nameLabel.Text = "Name";
             // 
@@ -65,8 +66,9 @@
             // 
             emailTxt.Location = new Point(538, 222);
             emailTxt.Name = "emailTxt";
-            emailTxt.Size = new Size(327, 34);
+            emailTxt.Size = new Size(327, 39);
             emailTxt.TabIndex = 5;
+            emailTxt.TextChanged += emailTxt_TextChanged;
             // 
             // emailLabel
             // 
@@ -74,7 +76,7 @@
             emailLabel.Location = new Point(364, 222);
             emailLabel.Margin = new Padding(4, 0, 4, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(59, 28);
+            emailLabel.Size = new Size(71, 32);
             emailLabel.TabIndex = 4;
             emailLabel.Text = "Email";
             // 
@@ -82,7 +84,7 @@
             // 
             numberTxt.Location = new Point(538, 297);
             numberTxt.Name = "numberTxt";
-            numberTxt.Size = new Size(327, 34);
+            numberTxt.Size = new Size(327, 39);
             numberTxt.TabIndex = 7;
             // 
             // numberLabel
@@ -91,7 +93,7 @@
             numberLabel.Location = new Point(364, 297);
             numberLabel.Margin = new Padding(4, 0, 4, 0);
             numberLabel.Name = "numberLabel";
-            numberLabel.Size = new Size(144, 28);
+            numberLabel.Size = new Size(177, 32);
             numberLabel.TabIndex = 6;
             numberLabel.Text = "Phone Number";
             // 
@@ -99,7 +101,7 @@
             // 
             passwordTxt.Location = new Point(538, 387);
             passwordTxt.Name = "passwordTxt";
-            passwordTxt.Size = new Size(327, 34);
+            passwordTxt.Size = new Size(327, 39);
             passwordTxt.TabIndex = 9;
             // 
             // passwordLabel
@@ -108,7 +110,7 @@
             passwordLabel.Location = new Point(364, 387);
             passwordLabel.Margin = new Padding(4, 0, 4, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(93, 28);
+            passwordLabel.Size = new Size(111, 32);
             passwordLabel.TabIndex = 8;
             passwordLabel.Text = "Password";
             // 
@@ -138,35 +140,35 @@
             // 
             // home
             // 
-            home.Location = new Point(4, 37);
+            home.Location = new Point(4, 41);
             home.Name = "home";
             home.Padding = new Padding(3);
-            home.Size = new Size(1272, 6);
+            home.Size = new Size(1272, 2);
             home.TabIndex = 1;
             home.Text = "Home";
             home.UseVisualStyleBackColor = true;
             // 
             // ViewAdmins
             // 
-            ViewAdmins.Location = new Point(4, 37);
+            ViewAdmins.Location = new Point(4, 34);
             ViewAdmins.Name = "ViewAdmins";
-            ViewAdmins.Size = new Size(1272, 6);
+            ViewAdmins.Size = new Size(1272, 9);
             ViewAdmins.TabIndex = 2;
             ViewAdmins.Text = "View Admins";
             ViewAdmins.UseVisualStyleBackColor = true;
             // 
             // adding
             // 
-            adding.Location = new Point(4, 37);
+            adding.Location = new Point(4, 34);
             adding.Name = "adding";
-            adding.Size = new Size(1272, 6);
+            adding.Size = new Size(1272, 9);
             adding.TabIndex = 3;
             adding.Text = "Add Admin";
             adding.UseVisualStyleBackColor = true;
             // 
-            // addAdmin
+            // AddAdminView
             // 
-            AutoScaleDimensions = new SizeF(11F, 28F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1280, 698);
             Controls.Add(AdminNavbar);
@@ -181,6 +183,7 @@
             Controls.Add(nameLabel);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
+           // Name = "AddAdminView";
             Text = "Add Admin";
             AdminNavbar.ResumeLayout(false);
             ResumeLayout(false);

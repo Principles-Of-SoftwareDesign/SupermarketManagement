@@ -41,5 +41,15 @@ namespace SupermarketManagement
         {
             presenter.addAdmin();
         }
+
+        private void nameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void emailTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
