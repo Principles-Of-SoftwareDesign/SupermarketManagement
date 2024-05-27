@@ -101,6 +101,31 @@ namespace SupermarketManagement
 
         }
 
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            cmd = new MySqlCommand("UPDATE `category` SET `name`=@name WHERE `category_id`=@category_id", conn);
+            cmd.Parameters.Clear();
+
+            cmd.Parameters.AddWithValue("@category_id", txt_id.Text);
+            cmd.Parameters.AddWithValue("@name", txt_name.Text);
+
+            int i = cmd.ExecuteNonQuery();
+            if (i > 0)
+            {
+                MessageBox.Show("Record updated successfully!", "Edit Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Record update failed!", "Edit Category", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
+            conn.Close();
+            LoadRecord();
+            clear();
+        }
+
         
     }
 }
