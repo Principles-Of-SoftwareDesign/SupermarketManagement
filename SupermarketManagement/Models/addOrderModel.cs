@@ -9,23 +9,17 @@ namespace SupermarketManagement.Models
 {
     public class addOrderModel
     {
-        private int id;
-        private int amount;
+        private string amount;
         private string name;
-        private double price;
+        private string price;
         public addOrderModel()
         {
-            id = -1;
+            amount = "0";
             name = "";
 
-            price = 0.0;
+            price = "0";
         }
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-        public int Amount
+        public string Amount
         {
             get { return amount; }
             set { amount = value; }
@@ -35,7 +29,7 @@ namespace SupermarketManagement.Models
             get { return name; }
             set { name = value; }
         }
-        public double Price
+        public string Price
         {
             get { return price; }
             set { price = value; }
