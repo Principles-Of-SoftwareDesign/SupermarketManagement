@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagement.Presenters
 {
-    public class AddAdminPresenter
+    public class AddAdminPresenter 
     {
 
         private IAddAdminView view;

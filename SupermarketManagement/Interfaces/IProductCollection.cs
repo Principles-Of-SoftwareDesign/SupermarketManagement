@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagement.Interfaces
 {
-	public interface IProductCollection
-	{
-		IIterator CreateIterator();
-	}
+    public interface IProductCollection
+    {
+        IIterator CreateIterator();
+    }
 }

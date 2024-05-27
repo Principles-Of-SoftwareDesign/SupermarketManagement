@@ -57,7 +57,7 @@
             txtprice.Name = "txtprice";
             txtprice.Size = new Size(408, 31);
             txtprice.TabIndex = 27;
-           
+            txtprice.TextChanged += this.passwordTxt_TextChanged;
             // 
             // priceLabel
             // 
@@ -68,7 +68,6 @@
             priceLabel.Size = new Size(53, 25);
             priceLabel.TabIndex = 26;
             priceLabel.Text = "Price:";
-           
             // 
             // txtquantity
             // 
@@ -77,7 +76,6 @@
             txtquantity.Name = "txtquantity";
             txtquantity.Size = new Size(408, 31);
             txtquantity.TabIndex = 25;
-          
             // 
             // quantityLabel
             // 
@@ -88,7 +86,6 @@
             quantityLabel.Size = new Size(84, 25);
             quantityLabel.TabIndex = 24;
             quantityLabel.Text = "Quantity:";
-           
             // 
             // txtname
             // 
@@ -97,7 +94,6 @@
             txtname.Name = "txtname";
             txtname.Size = new Size(408, 31);
             txtname.TabIndex = 23;
-           
             // 
             // name
             // 
@@ -108,7 +104,6 @@
             name.Size = new Size(111, 25);
             name.TabIndex = 22;
             name.Text = "Order name:";
-            
             // 
             // addOrder
             // 

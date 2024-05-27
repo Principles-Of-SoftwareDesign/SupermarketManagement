@@ -11,6 +11,7 @@ namespace SupermarketManagement
         private AddAdminPresenter presenter;
         private IViewAdmins viewAdmins;
 
+
         public AddAdminView()
         {
             InitializeComponent();

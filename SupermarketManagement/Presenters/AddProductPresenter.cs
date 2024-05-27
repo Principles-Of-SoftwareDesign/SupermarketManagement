@@ -17,7 +17,7 @@ namespace SupermarketManagement.Presenters
         public AddProductPresenter(IAddProductView view)
         {
             this.view = view;
-            this.repository = new ProductRepository();  
+            this.repository = new ProductRepository();
         }
 
         public void AddProduct()
