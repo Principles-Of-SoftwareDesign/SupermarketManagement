@@ -42,6 +42,7 @@ namespace SupermarketManagement.Presenters
             if (repository.AddCategory(category))
             {
                 view.ShowMessage("Record saved successfully!", "Add Category");
+                view.ClearFields();
                 LoadCategories();
             }
             else
