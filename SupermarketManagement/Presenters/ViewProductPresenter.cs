@@ -1,32 +1,30 @@
-﻿/*using System;
-using System.Collections.Generic;
-using SupermarketManagement.Models; 
-using SupermarketManagement.Repositories; 
+﻿using System;
+using SupermarketManagement.Models;
+using SupermarketManagement.Repositories;
+using System.Windows.Forms;
 using SupermarketManagement.Views;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SupermarketManagement.Presenters
 {
-    public class ViewProductsPresenter
+    public class ViewProductPresenter
     {
-        private readonly IViewProductView view;
-        private readonly ProductRepository repository;
+        private IProductView view;
+        private ProductRepository productRepository;
 
-        public ViewProductsPresenter(IViewProductsView view, ProductRepository repository)
+        public ViewProductPresenter(IProductView view)
         {
-            this.view = view ?? throw new ArgumentNullException(nameof(view));
-            this.repository = repository ?? throw new ArgumentNullException(nameof(repository));
-            LoadProducts();
+            this.view = view;
+            this.productRepository = new ProductRepository();  
         }
 
         public void LoadProducts()
         {
             try
             {
-                var products = repository.GetAllProducts();
-                view.DisplayProducts(products);
+                var products = productRepository.GetAllProducts();
+                BindingSource source = new BindingSource();
+                source.DataSource = products;
+                view.DisplayProducts(source);
             }
             catch (Exception ex)
             {
@@ -35,4 +33,3 @@ namespace SupermarketManagement.Presenters
         }
     }
 }
-*/
