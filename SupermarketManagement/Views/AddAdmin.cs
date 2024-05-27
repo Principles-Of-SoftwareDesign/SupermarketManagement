@@ -2,6 +2,7 @@ using MySql.Data.MySqlClient;
 using SupermarketManagement.Config;
 using SupermarketManagement.Presenters;
 using SupermarketManagement.Views;
+using System.Windows.Forms;
 
 namespace SupermarketManagement
 {
@@ -23,8 +24,11 @@ namespace SupermarketManagement
 
         public void CloseForm()
         {
-            this.Hide();
-            new AddAdminView();
+            nameTxt.Text = string.Empty;
+            nameTxt.Text = string.Empty;
+            emailTxt.Text = string.Empty;
+            numberTxt.Text = string.Empty;
+            passwordTxt.Text = string.Empty;
         }
 
         public void ShowMessage(string message, string title)
