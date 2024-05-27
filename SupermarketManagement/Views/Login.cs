@@ -27,8 +27,8 @@ namespace SupermarketManagement
         public login()
         {
             InitializeComponent();
-            presenter = new LoginPresenter(this); // Ensure presenter is instantiated
-
+            presenter = new LoginPresenter(this); 
+            txtpassword.PasswordChar = '*';
             this.hashing = new Hashing();
         }
 

@@ -17,7 +17,7 @@ namespace SupermarketManagement
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
          
-            Application.Run(new AddProduct());
+            Application.Run(new login());
         }
     }
 }
