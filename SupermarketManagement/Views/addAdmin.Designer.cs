@@ -50,6 +50,7 @@
             nameTxt.Name = "nameTxt";
             nameTxt.Size = new Size(327, 34);
             nameTxt.TabIndex = 3;
+           
             // 
             // nameLabel
             // 
@@ -60,6 +61,7 @@
             nameLabel.Size = new Size(64, 28);
             nameLabel.TabIndex = 2;
             nameLabel.Text = "Name";
+           
             // 
             // emailTxt
             // 
@@ -67,6 +69,7 @@
             emailTxt.Name = "emailTxt";
             emailTxt.Size = new Size(327, 34);
             emailTxt.TabIndex = 5;
+           
             // 
             // emailLabel
             // 
@@ -77,6 +80,7 @@
             emailLabel.Size = new Size(59, 28);
             emailLabel.TabIndex = 4;
             emailLabel.Text = "Email";
+            
             // 
             // numberTxt
             // 
@@ -84,6 +88,7 @@
             numberTxt.Name = "numberTxt";
             numberTxt.Size = new Size(327, 34);
             numberTxt.TabIndex = 7;
+          
             // 
             // numberLabel
             // 
@@ -94,6 +99,7 @@
             numberLabel.Size = new Size(144, 28);
             numberLabel.TabIndex = 6;
             numberLabel.Text = "Phone Number";
+          
             // 
             // passwordTxt
             // 
@@ -101,6 +107,7 @@
             passwordTxt.Name = "passwordTxt";
             passwordTxt.Size = new Size(327, 34);
             passwordTxt.TabIndex = 9;
+        
             // 
             // passwordLabel
             // 
@@ -111,6 +118,7 @@
             passwordLabel.Size = new Size(93, 28);
             passwordLabel.TabIndex = 8;
             passwordLabel.Text = "Password";
+            
             // 
             // addAdminBtn
             // 
@@ -135,6 +143,7 @@
             AdminNavbar.SelectedIndex = 0;
             AdminNavbar.Size = new Size(1280, 47);
             AdminNavbar.TabIndex = 12;
+            
             // 
             // home
             // 
@@ -145,26 +154,29 @@
             home.TabIndex = 1;
             home.Text = "Home";
             home.UseVisualStyleBackColor = true;
+           
             // 
             // ViewAdmins
             // 
-            ViewAdmins.Location = new Point(4, 37);
+            ViewAdmins.Location = new Point(4, 29);
             ViewAdmins.Name = "ViewAdmins";
-            ViewAdmins.Size = new Size(1272, 6);
+            ViewAdmins.Size = new Size(1272, 14);
             ViewAdmins.TabIndex = 2;
             ViewAdmins.Text = "View Admins";
             ViewAdmins.UseVisualStyleBackColor = true;
+           
             // 
             // adding
             // 
-            adding.Location = new Point(4, 37);
+            adding.Location = new Point(4, 29);
             adding.Name = "adding";
-            adding.Size = new Size(1272, 6);
+            adding.Size = new Size(1272, 14);
             adding.TabIndex = 3;
             adding.Text = "Add Admin";
             adding.UseVisualStyleBackColor = true;
+            
             // 
-            // addAdmin
+            // AddAdminView
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -181,6 +193,7 @@
             Controls.Add(nameLabel);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
+            
             Text = "Add Admin";
             AdminNavbar.ResumeLayout(false);
             ResumeLayout(false);

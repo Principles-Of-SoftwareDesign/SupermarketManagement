@@ -37,5 +37,7 @@ namespace SupermarketManagement
         {
             presenter.addAdmin();
         }
+
+        
     }
 }
