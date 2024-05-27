@@ -14,14 +14,14 @@ using Org.BouncyCastle.Crypto.Generators;
 
 namespace SupermarketManagement
 {
-    public partial class Form1 : Form
+    public partial class login : Form
     {
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataReader reader;
         private Hashing hashing;
         dbConnection dbconn = new dbConnection();
-        public Form1()
+        public login()
         {
             InitializeComponent();
             conn = new MySqlConnection(dbconn.connect());
@@ -47,9 +47,20 @@ namespace SupermarketManagement
                     if (hashing.VerifyPassword(txtpassword.Text,storedHashedPassword))
                     {
 
-                        Category form = new Category();
-                        form.Show();
-                        this.Hide();
+                        int role = Convert.ToInt32(reader["role"]);
+                        if (role == 1)
+                             {
+                            AddAdminView admin=new AddAdminView();
+                            admin.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                         Category form = new Category();
+                          form.Show();
+                           this.Hide();
+                        }
+                       
                     }
                     else
                     {

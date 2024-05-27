@@ -1,6 +1,6 @@
 ﻿namespace SupermarketManagement
 {
-    partial class Form1
+    partial class login
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             button1 = new Button();
             panel2 = new Panel();
             panel1 = new Panel();
