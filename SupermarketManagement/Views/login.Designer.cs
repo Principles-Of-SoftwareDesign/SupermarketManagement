@@ -47,9 +47,10 @@
             // 
             button1.BackColor = SystemColors.Highlight;
             button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(294, 374);
+            button1.Location = new Point(561, 357);
+            button1.Margin = new Padding(2, 2, 2, 2);
             button1.Name = "button1";
-            button1.Size = new Size(246, 34);
+            button1.Size = new Size(197, 27);
             button1.TabIndex = 18;
             button1.Text = "LOG IN";
             button1.UseVisualStyleBackColor = false;
@@ -58,25 +59,28 @@
             // panel2
             // 
             panel2.BackColor = SystemColors.Highlight;
-            panel2.Location = new Point(283, 295);
+            panel2.Location = new Point(552, 294);
+            panel2.Margin = new Padding(2, 2, 2, 2);
             panel2.Name = "panel2";
-            panel2.Size = new Size(300, 3);
+            panel2.Size = new Size(240, 2);
             panel2.TabIndex = 17;
             // 
             // panel1
             // 
             panel1.BackColor = SystemColors.Highlight;
-            panel1.Location = new Point(280, 249);
+            panel1.Location = new Point(550, 257);
+            panel1.Margin = new Padding(2, 2, 2, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(300, 3);
+            panel1.Size = new Size(240, 2);
             panel1.TabIndex = 16;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(218, 221);
+            pictureBox2.Location = new Point(500, 235);
+            pictureBox2.Margin = new Padding(2, 2, 2, 2);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 31);
+            pictureBox2.Size = new Size(32, 25);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
@@ -84,9 +88,10 @@
             // pictureBox3
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(218, 267);
+            pictureBox3.Location = new Point(500, 272);
+            pictureBox3.Margin = new Padding(2, 2, 2, 2);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(40, 31);
+            pictureBox3.Size = new Size(32, 25);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox3.TabIndex = 14;
             pictureBox3.TabStop = false;
@@ -96,45 +101,48 @@
             label1.AutoSize = true;
             label1.Font = new Font("Pristina", 11F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.MenuHighlight;
-            label1.Location = new Point(353, 129);
+            label1.Location = new Point(608, 161);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(84, 29);
+            label1.Size = new Size(77, 27);
             label1.TabIndex = 13;
             label1.Text = "LOG IN";
             // 
             // txtpassword
             // 
             txtpassword.BorderStyle = BorderStyle.None;
-            txtpassword.Location = new Point(283, 264);
+            txtpassword.Location = new Point(552, 269);
+            txtpassword.Margin = new Padding(2, 2, 2, 2);
             txtpassword.Name = "txtpassword";
-            txtpassword.Size = new Size(297, 24);
+            txtpassword.Size = new Size(238, 20);
             txtpassword.TabIndex = 12;
-            txtpassword.TextChanged += txtpassword_TextChanged;
             // 
             // txtUserName
             // 
             txtUserName.BorderStyle = BorderStyle.None;
-            txtUserName.Location = new Point(280, 221);
+            txtUserName.Location = new Point(550, 235);
+            txtUserName.Margin = new Padding(2, 2, 2, 2);
             txtUserName.Name = "txtUserName";
-            txtUserName.Size = new Size(300, 24);
+            txtUserName.Size = new Size(240, 20);
             txtUserName.TabIndex = 11;
             // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.Capture;
-            pictureBox1.Location = new Point(365, 45);
+            pictureBox1.Location = new Point(618, 94);
+            pictureBox1.Margin = new Padding(2, 2, 2, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(61, 54);
+            pictureBox1.Size = new Size(49, 43);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 10;
             pictureBox1.TabStop = false;
             // 
             // login
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1350, 510);
             Controls.Add(button1);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -144,9 +152,9 @@
             Controls.Add(txtpassword);
             Controls.Add(txtUserName);
             Controls.Add(pictureBox1);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "login";
             Text = "login";
-            //Load += this.login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

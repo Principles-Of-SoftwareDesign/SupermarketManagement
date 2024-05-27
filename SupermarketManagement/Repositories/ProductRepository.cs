@@ -6,23 +6,13 @@ using SupermarketManagement.Config;
 
 namespace SupermarketManagement.Repositories
 {
-    public class ProductRepository : Repository
+    public class ProductRepository : Repository, IProductRepository
     {
-        private MySqlCommand cmd;
-        private MySqlDataReader reader;
-        private dbConnection dbconnection = new dbConnection();
-        private MySqlConnection connection;
-
-        public ProductRepository()
-        {
-            this.connection = new MySqlConnection(dbconnection.connect());
-        }
-
         public bool AddProduct(ProductModel product)
         {
             try
             {
-                connection.Open();
+                OpenConnection();
                 cmd = new MySqlCommand("INSERT INTO products (name, category, price, quantity) VALUES (@Name, @Category, @Price, @Quantity)", connection);
                 cmd.Parameters.AddWithValue("@Name", product.Name);
                 cmd.Parameters.AddWithValue("@Category", product.Category);
@@ -40,7 +30,7 @@ namespace SupermarketManagement.Repositories
             finally
             {
                 if (connection != null && connection.State == System.Data.ConnectionState.Open)
-                    connection.Close();
+                    CloseConnection();
             }
         }
 
@@ -49,7 +39,7 @@ namespace SupermarketManagement.Repositories
             var products = new List<ProductModel>();
             try
             {
-                connection.Open();
+                OpenConnection();
                 cmd = new MySqlCommand("SELECT * FROM `products`", connection);
                 reader = cmd.ExecuteReader();
                 while (reader.Read())
@@ -72,7 +62,7 @@ namespace SupermarketManagement.Repositories
             finally
             {
                 reader?.Close();
-                connection?.Close();
+                CloseConnection();
             }
             return products;
         }

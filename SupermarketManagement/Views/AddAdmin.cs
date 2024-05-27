@@ -11,10 +11,12 @@ namespace SupermarketManagement
         private AddAdminPresenter presenter;
         private IViewAdmins viewAdmins;
 
+
         public AddAdminView()
         {
             InitializeComponent();
             presenter = new AddAdminPresenter(this);
+            passwordTxt.PasswordChar = '*';
         }
 
         public string Name => nameTxt.Text;

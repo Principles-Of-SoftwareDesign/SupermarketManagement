@@ -16,14 +16,8 @@ namespace SupermarketManagement
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //IAdminRepository repo = new AdminRepository();
-            //IViewAdmins view = new ViewAdmins();
-            ICashierRepository repo = new CashierRepository();
-            IViewCashiers view = new ViewCashiers();
-            new ViewCashierPresenter(view, repo);
+         
             Application.Run(new login());
-           
-
         }
     }
 }
