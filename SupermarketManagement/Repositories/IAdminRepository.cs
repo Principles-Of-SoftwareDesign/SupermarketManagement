@@ -11,7 +11,6 @@ namespace SupermarketManagement.Repositories
     public interface IAdminRepository
     {
         bool addAdmin(AdminModel adminModel);
-        void EditAdmin(AdminModel adminModel);
         IEnumerable<AdminModel> GetAllAdmins();
 
     }

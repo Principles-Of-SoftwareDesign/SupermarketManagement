@@ -11,22 +11,15 @@ namespace SupermarketManagement.Repositories
 {
     public class CategoryRepository : Repository , ICategoryRepository
     {
-        private MySqlCommand cmd;
-        private MySqlDataReader reader;
-        private dbConnection dbconnection = new dbConnection();
-        public CategoryRepository()
-        {
-            this.connection = new MySqlConnection(dbconnection.connect());
-        }
         public bool AddCategory(CategoryModel category)
         {
-            connection.Open();
+            OpenConnection();
             cmd = new MySqlCommand("INSERT INTO `category`(`category_id`, `name`) VALUES (@category_id, @name)", connection);
             //cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@category_id", category.CategoryID);
             cmd.Parameters.AddWithValue("@name", category.Name);
             int i = cmd.ExecuteNonQuery();
-            connection.Close();
+            CloseConnection();
             return i > 0;
         }
 

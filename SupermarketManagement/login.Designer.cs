@@ -118,7 +118,6 @@
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(300, 24);
             txtUserName.TabIndex = 11;
-            txtUserName.TextChanged += txtUserName_TextChanged;
             // 
             // pictureBox1
             // 
