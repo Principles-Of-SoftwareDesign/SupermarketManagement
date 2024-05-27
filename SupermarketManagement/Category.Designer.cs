@@ -31,12 +31,14 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
-            txt_id = new TextBox();
             txt_name = new TextBox();
             btn_add = new Button();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            txt_id = new TextBox();
+            btn_update = new Button();
+            btn_delete = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -58,13 +60,6 @@
             label2.Text = "Category Name:";
             label2.Click += label2_Click;
             // 
-            // txt_id
-            // 
-            txt_id.Location = new Point(163, 77);
-            txt_id.Name = "txt_id";
-            txt_id.Size = new Size(177, 27);
-            txt_id.TabIndex = 2;
-            // 
             // txt_name
             // 
             txt_name.Location = new Point(163, 151);
@@ -74,7 +69,7 @@
             // 
             // btn_add
             // 
-            btn_add.Location = new Point(183, 269);
+            btn_add.Location = new Point(12, 269);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(116, 37);
             btn_add.TabIndex = 4;
@@ -103,15 +98,17 @@
             dataGridView1.RowHeadersWidth = 51;
             dataGridView1.Size = new Size(338, 401);
             dataGridView1.TabIndex = 5;
+            dataGridView1.CellClick += dataGridView1_CellClick;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Column1
             // 
-            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             Column1.HeaderText = "ID";
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
+            Column1.Width = 53;
             // 
             // Column2
             // 
@@ -121,11 +118,40 @@
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
             // 
+            // txt_id
+            // 
+            txt_id.Location = new Point(163, 77);
+            txt_id.Name = "txt_id";
+            txt_id.Size = new Size(177, 27);
+            txt_id.TabIndex = 2;
+            // 
+            // btn_update
+            // 
+            btn_update.Location = new Point(146, 269);
+            btn_update.Name = "btn_update";
+            btn_update.Size = new Size(94, 37);
+            btn_update.TabIndex = 6;
+            btn_update.Text = "Update";
+            btn_update.UseVisualStyleBackColor = true;
+            btn_update.Click += btn_update_Click;
+            // 
+            // btn_delete
+            // 
+            btn_delete.Location = new Point(257, 269);
+            btn_delete.Name = "btn_delete";
+            btn_delete.Size = new Size(94, 37);
+            btn_delete.TabIndex = 7;
+            btn_delete.Text = "Delete";
+            btn_delete.UseVisualStyleBackColor = true;
+            btn_delete.Click += btn_delete_Click;
+            // 
             // Category
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(840, 482);
+            Controls.Add(btn_delete);
+            Controls.Add(btn_update);
             Controls.Add(dataGridView1);
             Controls.Add(btn_add);
             Controls.Add(txt_name);
@@ -143,11 +169,13 @@
 
         private Label label1;
         private Label label2;
-        private TextBox txt_id;
         private TextBox txt_name;
         private Button btn_add;
         private DataGridView dataGridView1;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
+        private TextBox txt_id;
+        private Button btn_update;
+        private Button btn_delete;
     }
 }

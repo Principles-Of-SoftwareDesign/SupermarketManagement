@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using MySql.Data.MySqlClient;
 using SupermarketManagement.Config;
 
@@ -17,7 +18,7 @@ namespace SupermarketManagement
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataReader reader;
-        int i = 0;
+        //int i = 0;
 
         dbConnection dbconn = new dbConnection();
 
@@ -40,18 +41,18 @@ namespace SupermarketManagement
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                //dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["id"].ToString(), reader["name"].ToString());
+                dataGridView1.Rows.Add(reader["category_id"].ToString(), reader["name"].ToString());
 
-                dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["name"].ToString());
+                //dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["name"].ToString());
 
             }
             reader.Close();
             conn.Close();
         }
 
-        public void Clear()
+        public void clear()
         {
-            txt_id.Clear(); 
+            txt_id.Clear();
             txt_name.Clear();
         }
 
@@ -59,17 +60,17 @@ namespace SupermarketManagement
         {
             if ((txt_id.Text == string.Empty) || (txt_name.Text == string.Empty))
             {
-                MessageBox.Show("Warning: Required fill field!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill both the ID and Name fields!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             else
             {
                 conn.Open();
-                cmd = new MySqlCommand("INSERT INTO `category`(`id`, `name`) VALUES (@id,@name)", conn);
+                cmd = new MySqlCommand("INSERT INTO `category`(`category_id`, `name`) VALUES (@category_id, @name)", conn);
                 cmd.Parameters.Clear();
-                cmd.Parameters.AddWithValue("@id", txt_id.Text);
+                cmd.Parameters.AddWithValue("@category_id", txt_id.Text);
                 cmd.Parameters.AddWithValue("@name", txt_name.Text);
-                i = cmd.ExecuteNonQuery();
+                int i = cmd.ExecuteNonQuery();
                 if (i > 0)
                 {
                     MessageBox.Show("Record saved successfully!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -79,10 +80,9 @@ namespace SupermarketManagement
                     MessageBox.Show("Record save failed!", "Add Category", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
 
-
                 conn.Close();
                 LoadRecord();
-                Clear();
+                clear();
             }
         }
 
@@ -102,6 +102,5 @@ namespace SupermarketManagement
         }
 
         
-       
     }
 }
