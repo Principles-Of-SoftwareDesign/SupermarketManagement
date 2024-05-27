@@ -57,7 +57,6 @@
             txtprice.Name = "txtprice";
             txtprice.Size = new Size(408, 31);
             txtprice.TabIndex = 27;
-            txtprice.TextChanged += this.passwordTxt_TextChanged;
             // 
             // priceLabel
             // 
