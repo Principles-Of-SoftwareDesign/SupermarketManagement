@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using MySql.Data.MySqlClient;
 using SupermarketManagement.Config;
+using SupermarketManagement.Models;
 using SupermarketManagement.Presenters;
 using SupermarketManagement.Repositories;
 using SupermarketManagement.Views;
@@ -36,13 +38,24 @@ namespace SupermarketManagement
 
             //to display all categories when the form loads
             this.Load += new System.EventHandler(this.Category_Load);
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            btn_add.Click += new System.EventHandler(this.btn_add_Click);
+            btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
         }
 
         private void Category_Load(object sender, EventArgs e)
         {
-            //LoadRecord();
+            presenter.LoadCategories();
         }
-
+        public void DisplayCategories(IEnumerable<CategoryModel> categories)
+        {
+            dataGridView1.Rows.Clear();
+            foreach (var category in categories)
+            {
+                dataGridView1.Rows.Add(category.CategoryID, category.Name);
+            }
+        }
         public void ShowMessage(string message, string title)
         {
             MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -73,12 +86,16 @@ namespace SupermarketManagement
         //    conn.Close();
         //}
 
-        public void clear()
+        //public void clear()
+        //{
+        //    txt_id.Clear();
+        //    txt_name.Clear();
+        //}
+        public void ClearFields()
         {
             txt_id.Clear();
             txt_name.Clear();
         }
-
         private void btn_add_Click(object sender, EventArgs e)
         {
             //if ((txt_id.Text == string.Empty) || (txt_name.Text == string.Empty))
@@ -134,7 +151,7 @@ namespace SupermarketManagement
 
             //cmd.Parameters.AddWithValue("@category_id", txt_id.Text);
             //cmd.Parameters.AddWithValue("@name", txt_name.Text);
-            
+
             //int i = cmd.ExecuteNonQuery();
             //if (i > 0)
             //{
@@ -145,10 +162,11 @@ namespace SupermarketManagement
             //    MessageBox.Show("Record update failed!", "Edit Category", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //}
 
-
             //conn.Close();
             ////LoadRecord();
             //clear();
+
+            presenter.UpdateCategory();
         }
 
         private void btn_delete_Click(object sender, EventArgs e)
@@ -169,16 +187,19 @@ namespace SupermarketManagement
             //    MessageBox.Show("Record delete failed!", "Delete Category", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             //}
 
-
             //conn.Close();
             ////LoadRecord();
             //clear();
+
+            presenter.DeleteCategory();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            txt_name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            //txt_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            //txt_name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+
+            presenter.SelectCategory(e.RowIndex, dataGridView1);
         }
     }
 }

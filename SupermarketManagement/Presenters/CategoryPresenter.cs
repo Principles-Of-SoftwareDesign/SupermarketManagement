@@ -19,6 +19,11 @@ namespace SupermarketManagement.Presenters
             this.view = view;
             this.repository = repository;
         }
+        public void LoadCategories()
+        {
+            var categories = repository.GetAllCategories();
+            view.DisplayCategories(categories);
+        }
 
         public void AddCategory()
         {
@@ -37,13 +42,54 @@ namespace SupermarketManagement.Presenters
             if (repository.AddCategory(category))
             {
                 view.ShowMessage("Record saved successfully!", "Add Category");
-                //LoadCategories();
+                view.ClearFields();
+                LoadCategories();
             }
             else
             {
                 view.ShowMessage("Record save failed!", "Add Category");
             }
         }
+        public void UpdateCategory()
+        {
+            var category = new CategoryModel
+            {
+                CategoryID = int.Parse(view.CategoryId),
+                Name = view.CategoryName
+            };
 
+            if (repository.UpdateCategory(category))
+            {
+                view.ShowMessage("Record updated successfully!", "Edit Category");
+                LoadCategories();
+            }
+            else
+            {
+                view.ShowMessage("Record update failed!", "Edit Category");
+            }
+        }
+        public void DeleteCategory()
+        {
+            int categoryId = int.Parse(view.CategoryId);
+
+            if (repository.DeleteCategory(categoryId))
+            {
+                view.ShowMessage("Record deleted successfully!", "Delete Category");
+                LoadCategories();
+            }
+            else
+            {
+                view.ShowMessage("Record delete failed!", "Delete Category");
+            }
+        }
+
+        public void SelectCategory(int rowIndex, DataGridView dataGridView)
+        {
+            if (rowIndex >= 0 && rowIndex < dataGridView.Rows.Count)
+            {
+                view.CategoryId = dataGridView.Rows[rowIndex].Cells[0].Value.ToString();
+                view.CategoryName = dataGridView.Rows[rowIndex].Cells[1].Value.ToString();
+            }
+        }
     }
 }
