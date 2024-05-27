@@ -27,7 +27,7 @@ namespace SupermarketManagement.Repositories
         {
             var cashiers = new List<CashierModel>();
             connection.Open();
-            cmd = new MySqlCommand("SELECT * FROM `users`", connection);
+            cmd = new MySqlCommand("SELECT * FROM `users` WHERE role=0", connection);
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
