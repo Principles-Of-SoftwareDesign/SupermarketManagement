@@ -50,6 +50,7 @@
             nameTxt.Name = "nameTxt";
             nameTxt.Size = new Size(327, 61);
             nameTxt.TabIndex = 3;
+           
             // 
             // nameLabel
             // 
@@ -60,6 +61,7 @@
             nameLabel.Size = new Size(128, 54);
             nameLabel.TabIndex = 2;
             nameLabel.Text = "Name";
+           
             // 
             // emailTxt
             // 
@@ -77,6 +79,7 @@
             emailLabel.Size = new Size(117, 54);
             emailLabel.TabIndex = 4;
             emailLabel.Text = "Email";
+            
             // 
             // numberTxt
             // 
@@ -84,6 +87,7 @@
             numberTxt.Name = "numberTxt";
             numberTxt.Size = new Size(327, 61);
             numberTxt.TabIndex = 7;
+          
             // 
             // numberLabel
             // 
@@ -94,6 +98,7 @@
             numberLabel.Size = new Size(292, 54);
             numberLabel.TabIndex = 6;
             numberLabel.Text = "Phone Number";
+          
             // 
             // passwordTxt
             // 
@@ -101,6 +106,7 @@
             passwordTxt.Name = "passwordTxt";
             passwordTxt.Size = new Size(327, 61);
             passwordTxt.TabIndex = 9;
+        
             // 
             // passwordLabel
             // 
@@ -111,6 +117,7 @@
             passwordLabel.Size = new Size(188, 54);
             passwordLabel.TabIndex = 8;
             passwordLabel.Text = "Password";
+            
             // 
             // addAdminBtn
             // 
@@ -135,6 +142,7 @@
             AdminNavbar.SelectedIndex = 0;
             AdminNavbar.Size = new Size(1653, 47);
             AdminNavbar.TabIndex = 12;
+            
             // 
             // home
             // 
@@ -145,6 +153,7 @@
             home.TabIndex = 1;
             home.Text = "Home";
             home.UseVisualStyleBackColor = true;
+           
             // 
             // ViewAdmins
             // 
@@ -154,6 +163,7 @@
             ViewAdmins.TabIndex = 2;
             ViewAdmins.Text = "View Admins";
             ViewAdmins.UseVisualStyleBackColor = true;
+           
             // 
             // adding
             // 
@@ -163,6 +173,7 @@
             adding.TabIndex = 3;
             adding.Text = "Add Admin";
             adding.UseVisualStyleBackColor = true;
+            
             // 
             // AddAdminView
             // 
@@ -181,6 +192,7 @@
             Controls.Add(nameLabel);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
+            
             Text = "Add Admin";
             AdminNavbar.ResumeLayout(false);
             ResumeLayout(false);

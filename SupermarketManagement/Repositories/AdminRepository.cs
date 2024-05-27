@@ -13,23 +13,12 @@ namespace SupermarketManagement.Repositories
 {
     public class AdminRepository : Repository, IAdminRepository
     {
-        private MySqlCommand cmd;
-        private MySqlDataReader reader;
-        private dbConnection dbconnection = new dbConnection();
-        public AdminRepository()
-        {
-            this.connection = new MySqlConnection(dbconnection.connect());
-        }
-        public void EditAdmin(AdminModel adminModel)
-        {
-            throw new NotImplementedException();
-        }
-
+       
         public IEnumerable<AdminModel> GetAllAdmins()
         {
             var admins = new List<AdminModel>();
-            connection.Open();
-            cmd = new MySqlCommand("SELECT * FROM `users`", connection);
+            OpenConnection();
+            cmd = new MySqlCommand("SELECT * FROM `users` WHERE role = 1", connection);
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
@@ -41,14 +30,13 @@ namespace SupermarketManagement.Repositories
                 admins.Add(adminModel);
             }
             reader.Close();
-            connection.Close();
-
+            CloseConnection();
             return admins;
         }
 
         public bool addAdmin(AdminModel admin)
         {
-            connection.Open();
+            OpenConnection();
             var cmd = new MySqlCommand("INSERT INTO users (name, email, phone_number, password, role) VALUES (@Name, @Email, @PhoneNumber, @Password, @Role)", connection);
             cmd.Parameters.AddWithValue("@Name", admin.Name);
             cmd.Parameters.AddWithValue("@Email", admin.Email);
@@ -57,7 +45,7 @@ namespace SupermarketManagement.Repositories
             cmd.Parameters.AddWithValue("@Role", admin.Role);
 
             int rowsAffected = cmd.ExecuteNonQuery();
-            connection.Close();
+            CloseConnection();
 
             return rowsAffected > 0;
         }
