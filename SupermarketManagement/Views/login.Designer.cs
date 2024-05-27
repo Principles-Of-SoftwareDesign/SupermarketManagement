@@ -145,7 +145,6 @@
             Controls.Add(pictureBox1);
             Name = "login";
             Text = "login";
-            Load += this.login_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
