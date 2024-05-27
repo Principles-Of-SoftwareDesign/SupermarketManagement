@@ -18,6 +18,32 @@ namespace SupermarketManagement.Repositories
         {
             this.connection = new MySqlConnection(dbconnection.connect());
         }
+
+        public IEnumerable<CategoryModel> GetAllCategories()
+        {
+            var categories = new List<CategoryModel>();
+            connection.Open();
+            cmd = new MySqlCommand("SELECT * FROM `category`", connection);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var category = new CategoryModel();
+                category.Id = (int)reader["id"];
+                category.CategoryID = (int)reader["category_id"];
+                category.Name = reader["name"].ToString();
+                categories.Add(category);
+
+                //categories.Add(new CategoryModel
+                //{
+                //    CategoryId = int.Parse(reader["category_id"].ToString()),
+                //    Name = reader["name"].ToString()
+                //});
+            }
+            reader.Close();
+            connection.Close();
+
+            return categories;
+        }
         public bool AddCategory(CategoryModel category)
         {
             connection.Open();

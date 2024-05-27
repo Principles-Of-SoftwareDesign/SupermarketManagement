@@ -9,7 +9,7 @@ namespace SupermarketManagement.Repositories
 {
     public interface ICategoryRepository
     {
-
+        IEnumerable<CategoryModel> GetAllCategories();
         bool AddCategory(CategoryModel category);
     }
 }

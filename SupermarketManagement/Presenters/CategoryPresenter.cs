@@ -19,6 +19,11 @@ namespace SupermarketManagement.Presenters
             this.view = view;
             this.repository = repository;
         }
+        public void LoadCategories()
+        {
+            var categories = repository.GetAllCategories();
+            view.DisplayCategories(categories);
+        }
 
         public void AddCategory()
         {
@@ -37,7 +42,7 @@ namespace SupermarketManagement.Presenters
             if (repository.AddCategory(category))
             {
                 view.ShowMessage("Record saved successfully!", "Add Category");
-                //LoadCategories();
+                LoadCategories();
             }
             else
             {

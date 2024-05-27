@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using MySql.Data.MySqlClient;
 using SupermarketManagement.Config;
+using SupermarketManagement.Models;
 using SupermarketManagement.Presenters;
 using SupermarketManagement.Repositories;
 using SupermarketManagement.Views;
@@ -40,9 +41,16 @@ namespace SupermarketManagement
 
         private void Category_Load(object sender, EventArgs e)
         {
-            //LoadRecord();
+            presenter.LoadCategories();
         }
-
+        public void DisplayCategories(IEnumerable<CategoryModel> categories)
+        {
+            dataGridView1.Rows.Clear();
+            foreach (var category in categories)
+            {
+                dataGridView1.Rows.Add(category.CategoryID, category.Name);
+            }
+        }
         public void ShowMessage(string message, string title)
         {
             MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
