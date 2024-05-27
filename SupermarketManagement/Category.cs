@@ -42,9 +42,6 @@ namespace SupermarketManagement
             while (reader.Read())
             {
                 dataGridView1.Rows.Add(reader["category_id"].ToString(), reader["name"].ToString());
-
-                //dataGridView1.Rows.Add(dataGridView1.Rows.Count + 1, reader["name"].ToString());
-
             }
             reader.Close();
             conn.Close();
@@ -109,7 +106,7 @@ namespace SupermarketManagement
 
             cmd.Parameters.AddWithValue("@category_id", txt_id.Text);
             cmd.Parameters.AddWithValue("@name", txt_name.Text);
-
+            
             int i = cmd.ExecuteNonQuery();
             if (i > 0)
             {
@@ -126,6 +123,34 @@ namespace SupermarketManagement
             clear();
         }
 
-        
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            conn.Open();
+            cmd = new MySqlCommand("DELETE FROM `category` WHERE `category_id`=@category_id", conn);
+            cmd.Parameters.Clear();
+
+            cmd.Parameters.AddWithValue("@category_id", txt_id.Text);
+
+            int i = cmd.ExecuteNonQuery();
+            if (i > 0)
+            {
+                MessageBox.Show("Record deleted successfully!", "Delete Category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Record delete failed!", "Delete Category", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+
+
+            conn.Close();
+            LoadRecord();
+            clear();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_id.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txt_name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+        }
     }
 }
