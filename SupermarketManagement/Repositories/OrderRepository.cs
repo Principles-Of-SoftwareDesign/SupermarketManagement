@@ -13,23 +13,18 @@ namespace SupermarketManagement.Repositories
     {
 
 
-        public bool addOrder(addOrderModel order)
+        public bool addOrder(OrderModel order)
         {
-            connection.Open();
+            OpenConnection();
             var cmd = new MySqlCommand("INSERT INTO orders (name, price, amount) VALUES (@Name, @Price, @Amount)", connection);
             cmd.Parameters.AddWithValue("@Name", order.Name);
             cmd.Parameters.AddWithValue("@Price", order.Price);
             cmd.Parameters.AddWithValue("@Amount", order.Amount);
 
             int rowsAffected = cmd.ExecuteNonQuery();
-            connection.Close();
+            CloseConnection();
 
             return rowsAffected > 0;
-        }
-
-        public bool AddCashier(CashierModel cashierModel)
-        {
-            throw new NotImplementedException();
         }
     }
 }

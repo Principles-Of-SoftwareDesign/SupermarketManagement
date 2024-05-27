@@ -47,7 +47,7 @@
             discountBtn.Name = "discountBtn";
             discountBtn.Size = new Size(316, 76);
             discountBtn.TabIndex = 11;
-            discountBtn.Text = "Add New Admin";
+            discountBtn.Text = "Add discount";
             discountBtn.UseVisualStyleBackColor = false;
             discountBtn.Click += discountBtn_Click;
             // 

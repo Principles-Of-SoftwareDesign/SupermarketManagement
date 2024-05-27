@@ -30,11 +30,9 @@ namespace SupermarketManagement.Presenters
                 return;
             }
 
-            var order = new addOrderModel
+            var order = new OrderModel
             {
                 Name = view.Name,
-                Amount=view.amount,
-                Price=view.price
                 
             };
 

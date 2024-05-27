@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagement.Models
 {
-    public class addOrderModel
+    public class OrderModel
     {
         private string amount;
         private string name;
         private string price;
-        public addOrderModel()
+        public OrderModel()
         {
             amount = "0";
             name = "";

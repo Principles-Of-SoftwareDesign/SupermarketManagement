@@ -9,7 +9,7 @@ namespace SupermarketManagement.Repositories
 {
     public interface IOrderRepository
     {
-        bool addOrder(addOrderModel orderModel);
+        bool addOrder(OrderModel orderModel);
 
     }
 }
