@@ -117,7 +117,6 @@
             Controls.Add(quantityLabel);
             Controls.Add(txtname);
             Controls.Add(name);
-            Name = "addOrder";
             Text = "addOrder";
             ResumeLayout(false);
             PerformLayout();

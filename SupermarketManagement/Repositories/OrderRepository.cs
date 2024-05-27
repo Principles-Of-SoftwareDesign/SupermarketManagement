@@ -16,10 +16,10 @@ namespace SupermarketManagement.Repositories
         public bool addOrder(addOrderModel order)
         {
             connection.Open();
-            var cmd = new MySqlCommand("INSERT INTO users (name, email, phone_number, password, role) VALUES (@Name, @Email, @PhoneNumber, @Password, @Role)", connection);
+            var cmd = new MySqlCommand("INSERT INTO orders (name, price, amount) VALUES (@Name, @Price, @Amount)", connection);
             cmd.Parameters.AddWithValue("@Name", order.Name);
-            cmd.Parameters.AddWithValue("@Email", order.Price);
-            cmd.Parameters.AddWithValue("@Role", order.Amount);
+            cmd.Parameters.AddWithValue("@Price", order.Price);
+            cmd.Parameters.AddWithValue("@Amount", order.Amount);
 
             int rowsAffected = cmd.ExecuteNonQuery();
             connection.Close();
