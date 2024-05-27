@@ -16,7 +16,6 @@ namespace SupermarketManagement
         {
             InitializeComponent();
             presenter = new AddAdminPresenter(this);
-            passwordTxt.PasswordChar = '*';
         }
 
         public string Name => nameTxt.Text;

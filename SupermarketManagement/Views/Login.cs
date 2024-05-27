@@ -27,8 +27,8 @@ namespace SupermarketManagement
         public login()
         {
             InitializeComponent();
-            presenter = new LoginPresenter(this); 
-            txtpassword.PasswordChar = '*';
+            presenter = new LoginPresenter(this);
+            //txtpassword.PasswordChar = '●';
             this.hashing = new Hashing();
         }
 
@@ -36,7 +36,7 @@ namespace SupermarketManagement
         private void button1_Click(object sender, EventArgs e)
         {
             presenter.Login();
-            
+
         }
 
         public void ShowMessage(string message)
