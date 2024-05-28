@@ -1,5 +1,4 @@
 ﻿using SupermarketManagement.Models;
-using SupermarketManagement.Models.SupermarketManagement.Models;
 using SupermarketManagement.Views;
 using System;
 using System.Collections.Generic;
@@ -11,15 +10,15 @@ namespace SupermarketManagement.Presenters
 {
     public class InvoicePresenter:IInvoicePresenter
     {
-        private readonly IInvoiceView view;
-        private readonly List<OrderModel> orders;
-        private readonly IDiscountHandlerFactory discountFactory;
+        private IInvoiceView view;
+        private List<OrderModel> orders;
+        private DiscountFactory discountFactory; 
+        private Invoice invoice;
 
-        public InvoicePresenter(IInvoiceView view, IDiscountHandlerFactory discountFactory)
+        public InvoicePresenter(Invoice invoice)
         {
-            this.view = view;
-            orders = new List<OrderModel>();
-            this.discountFactory = discountFactory;
+            this.invoice = invoice;
+            this.discountFactory = new DiscountFactory();
         }
 
        

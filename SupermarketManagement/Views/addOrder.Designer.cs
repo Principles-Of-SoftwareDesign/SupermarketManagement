@@ -86,7 +86,6 @@
             productLabel.Size = new Size(78, 25);
             productLabel.TabIndex = 22;
             productLabel.Text = "Product:";
-            productLabel.Click += productLabel_Click;
             // 
             // addOrder
             // 

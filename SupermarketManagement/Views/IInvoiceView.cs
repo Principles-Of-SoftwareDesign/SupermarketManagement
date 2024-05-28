@@ -8,7 +8,7 @@ namespace SupermarketManagement.Views
 {
     public interface IInvoiceView
     {
-        void ShowTotalPrice(double totalPrice);
+        string code { get; }
         void ShowDiscountApplied(string discountMessage);
         void ShowErrorMessage(string message);
     }

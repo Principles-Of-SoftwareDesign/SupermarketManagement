@@ -1,7 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using SupermarketManagement.Config;
 using SupermarketManagement.Models;
-using SupermarketManagement.Models.SupermarketManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

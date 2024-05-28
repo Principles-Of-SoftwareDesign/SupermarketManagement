@@ -12,12 +12,12 @@ namespace SupermarketManagement.Models
 
         public PercentedDiscount(double discountAmount)
         {
-            DiscountAmount = discountAmount;
+            this.DiscountAmount = discountAmount;
         }
 
         public void CalcDiscount()
         {
-            MessageBox.Show($"Percentage discount applied: {DiscountAmount}%");
+            MessageBox.Show($"Percentage discount applied: 10%");
         }
     }
 }

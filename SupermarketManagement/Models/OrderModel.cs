@@ -1,8 +1,6 @@
 ﻿using System;
 
 namespace SupermarketManagement.Models
-{
-    namespace SupermarketManagement.Models
     {
         public class OrderModel
         {
@@ -10,6 +8,6 @@ namespace SupermarketManagement.Models
             public decimal Amount { get; set; }
             public decimal TotalPrice { get; set; }
         }
-    }
+    
 
 }

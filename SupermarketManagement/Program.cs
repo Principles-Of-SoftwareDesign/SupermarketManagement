@@ -2,6 +2,7 @@ using SupermarketManagement.Repositories;
 using SupermarketManagement.Models;
 using SupermarketManagement.Presenters;
 using SupermarketManagement.Views;
+using Mysqlx.Crud;
 
 namespace SupermarketManagement
 {
@@ -19,7 +20,7 @@ namespace SupermarketManagement
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
          
-            Application.Run(new login());
+            Application.Run(new addOrder());
             //Application.Run(new ViewProduct());
             //Application.Run(new ViewCashiers());
         }

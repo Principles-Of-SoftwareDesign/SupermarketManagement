@@ -13,37 +13,39 @@ namespace SupermarketManagement.Views
 {
     public partial class Invoice : Form, IInvoiceView
     {
-        private readonly IInvoicePresenter presenter;
-        public string Code => discountTxt.Text;
+        private InvoicePresenter presenter;
+        public string code => discountTxt.Text;
 
         public Invoice()
         {
             InitializeComponent();
+            presenter=new InvoicePresenter(this);
         }
 
-        public Invoice(IInvoicePresenter presenter)
+        public Invoice(InvoicePresenter presenter)
         {
             this.presenter = presenter;
         }
 
-        public void ShowTotalPrice(double totalPrice)
+        public void SetPresenter(InvoicePresenter presenter)
         {
-            Console.WriteLine($"Total Price: {totalPrice}");
+            this.presenter = presenter ?? throw new ArgumentNullException(nameof(presenter));
         }
+
 
         public void ShowDiscountApplied(string discountMessage)
         {
-            Console.WriteLine(discountMessage);
+            MessageBox.Show(discountMessage);
         }
 
         public void ShowErrorMessage(string message)
         {
-            Console.WriteLine($"Error: {message}");
+            MessageBox.Show($"Error: {message}");
         }
         private void discountBtn_Click(object sender, EventArgs e)
         {
 
-            presenter.ApplyDiscount(Code);
+            presenter.ApplyDiscount(code);
 
         }
     }

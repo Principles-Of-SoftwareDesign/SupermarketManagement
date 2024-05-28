@@ -19,16 +19,14 @@ namespace SupermarketManagement.Models
         {
             if (code == "FIXED10")
             {
-                return new FixedDiscount(10);
+                return new FixedDiscount(100);
             }
             else if (code == "PERCENT10")
             {
                 return new PercentedDiscount(10);
             }
-            else
-            {
-                return null;
-            }
+            else return null;
+            
         }
     }
 }
