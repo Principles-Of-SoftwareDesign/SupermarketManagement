@@ -126,6 +126,7 @@ namespace SupermarketManagement
             //}
 
             presenter.AddCategory();
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -200,6 +201,23 @@ namespace SupermarketManagement
             //txt_name.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
 
             presenter.SelectCategory(e.RowIndex, dataGridView1);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+           ViewAdmins viewAdmins = new ViewAdmins();
+            viewAdmins.Show();
+            this.Hide();    
+        }
+
+        private void Category_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

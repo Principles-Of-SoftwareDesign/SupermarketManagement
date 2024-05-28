@@ -37,153 +37,200 @@
             passwordTxt = new TextBox();
             passwordLabel = new Label();
             addAdminBtn = new Button();
-            AdminNavbar = new TabControl();
-            home = new TabPage();
-            ViewAdmins = new TabPage();
-            adding = new TabPage();
-            AdminNavbar.SuspendLayout();
+            panel1 = new Panel();
+            label9 = new Label();
+            label8 = new Label();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // nameTxt
             // 
-            nameTxt.Location = new Point(687, 141);
+            nameTxt.Location = new Point(980, 233);
             nameTxt.Name = "nameTxt";
-            nameTxt.Size = new Size(327, 34);
+            nameTxt.Size = new Size(430, 34);
             nameTxt.TabIndex = 3;
             // 
             // nameLabel
             // 
             nameLabel.AutoSize = true;
-            nameLabel.Location = new Point(364, 144);
+            nameLabel.Font = new Font("Segoe UI Semibold", 14.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            nameLabel.Location = new Point(456, 251);
             nameLabel.Margin = new Padding(4, 0, 4, 0);
             nameLabel.Name = "nameLabel";
-            nameLabel.Size = new Size(64, 28);
+            nameLabel.Size = new Size(79, 32);
             nameLabel.TabIndex = 2;
             nameLabel.Text = "Name";
             // 
             // emailTxt
             // 
-            emailTxt.Location = new Point(687, 215);
+            emailTxt.Location = new Point(980, 379);
             emailTxt.Name = "emailTxt";
-            emailTxt.Size = new Size(327, 34);
+            emailTxt.Size = new Size(430, 34);
             emailTxt.TabIndex = 5;
             // 
             // emailLabel
             // 
             emailLabel.AutoSize = true;
-            emailLabel.Location = new Point(364, 222);
+            emailLabel.Font = new Font("Segoe UI Semibold", 14.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            emailLabel.Location = new Point(456, 379);
             emailLabel.Margin = new Padding(4, 0, 4, 0);
             emailLabel.Name = "emailLabel";
-            emailLabel.Size = new Size(59, 28);
+            emailLabel.Size = new Size(72, 32);
             emailLabel.TabIndex = 4;
             emailLabel.Text = "Email";
             // 
             // numberTxt
             // 
-            numberTxt.Location = new Point(687, 297);
+            numberTxt.Location = new Point(980, 517);
             numberTxt.Name = "numberTxt";
-            numberTxt.Size = new Size(327, 34);
+            numberTxt.Size = new Size(430, 34);
             numberTxt.TabIndex = 7;
             // 
             // numberLabel
             // 
             numberLabel.AutoSize = true;
-            numberLabel.Location = new Point(364, 297);
+            numberLabel.Font = new Font("Segoe UI Semibold", 14.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            numberLabel.Location = new Point(371, 517);
             numberLabel.Margin = new Padding(4, 0, 4, 0);
             numberLabel.Name = "numberLabel";
-            numberLabel.Size = new Size(144, 28);
+            numberLabel.Size = new Size(179, 32);
             numberLabel.TabIndex = 6;
             numberLabel.Text = "Phone Number";
             // 
             // passwordTxt
             // 
-            passwordTxt.Location = new Point(687, 384);
+            passwordTxt.Location = new Point(980, 678);
             passwordTxt.Name = "passwordTxt";
-            passwordTxt.Size = new Size(327, 34);
+            passwordTxt.Size = new Size(430, 34);
             passwordTxt.TabIndex = 9;
             passwordTxt.UseSystemPasswordChar = true;
+            passwordTxt.TextChanged += passwordTxt_TextChanged;
             // 
             // passwordLabel
             // 
             passwordLabel.AutoSize = true;
-            passwordLabel.Location = new Point(364, 387);
+            passwordLabel.Font = new Font("Segoe UI Semibold", 14.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            passwordLabel.Location = new Point(422, 678);
             passwordLabel.Margin = new Padding(4, 0, 4, 0);
             passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(93, 28);
+            passwordLabel.Size = new Size(115, 32);
             passwordLabel.TabIndex = 8;
             passwordLabel.Text = "Password";
             // 
             // addAdminBtn
             // 
-            addAdminBtn.BackColor = SystemColors.HotTrack;
-            addAdminBtn.ForeColor = Color.White;
-            addAdminBtn.Location = new Point(519, 489);
+            addAdminBtn.BackColor = Color.FromArgb(255, 192, 192);
+            addAdminBtn.Font = new Font("Segoe UI Semibold", 14.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addAdminBtn.ForeColor = Color.Black;
+            addAdminBtn.Location = new Point(848, 946);
             addAdminBtn.Name = "addAdminBtn";
-            addAdminBtn.Size = new Size(316, 76);
+            addAdminBtn.Size = new Size(448, 86);
             addAdminBtn.TabIndex = 10;
             addAdminBtn.Text = "Add New Admin";
             addAdminBtn.UseVisualStyleBackColor = false;
             addAdminBtn.Click += addAdminBtn_Click;
             // 
-            // AdminNavbar
+            // panel1
             // 
-            AdminNavbar.Controls.Add(home);
-            AdminNavbar.Controls.Add(ViewAdmins);
-            AdminNavbar.Controls.Add(adding);
-            AdminNavbar.Dock = DockStyle.Top;
-            AdminNavbar.Location = new Point(0, 0);
-            AdminNavbar.Name = "AdminNavbar";
-            AdminNavbar.SelectedIndex = 0;
-            AdminNavbar.Size = new Size(1653, 47);
-            AdminNavbar.TabIndex = 12;
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(addAdminBtn);
+            panel1.Controls.Add(passwordLabel);
+            panel1.Controls.Add(passwordTxt);
+            panel1.Controls.Add(numberLabel);
+            panel1.Controls.Add(numberTxt);
+            panel1.Controls.Add(emailLabel);
+            panel1.Controls.Add(emailTxt);
+            panel1.Controls.Add(nameLabel);
+            panel1.Controls.Add(nameTxt);
+            panel1.Location = new Point(381, 31);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1994, 1229);
+            panel1.TabIndex = 13;
             // 
-            // home
+            // label9
             // 
-            home.Location = new Point(4, 37);
-            home.Name = "home";
-            home.Padding = new Padding(3);
-            home.Size = new Size(1645, 6);
-            home.TabIndex = 1;
-            home.Text = "Home";
-            home.UseVisualStyleBackColor = true;
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(74, 489);
+            label9.Name = "label9";
+            label9.Size = new Size(189, 38);
+            label9.TabIndex = 20;
+            label9.Text = "View Admins";
             // 
-            // ViewAdmins
+            // label8
             // 
-            ViewAdmins.Location = new Point(4, 29);
-            ViewAdmins.Name = "ViewAdmins";
-            ViewAdmins.Size = new Size(1645, 14);
-            ViewAdmins.TabIndex = 2;
-            ViewAdmins.Text = "View Admins";
-            ViewAdmins.UseVisualStyleBackColor = true;
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.Location = new Point(81, 398);
+            label8.Name = "label8";
+            label8.Size = new Size(167, 38);
+            label8.TabIndex = 19;
+            label8.Text = "Add Admin";
             // 
-            // adding
+            // label7
             // 
-            adding.Location = new Point(4, 29);
-            adding.Name = "adding";
-            adding.Size = new Size(1645, 14);
-            adding.TabIndex = 3;
-            adding.Text = "Add Admin";
-            adding.UseVisualStyleBackColor = true;
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(92, 661);
+            label7.Name = "label7";
+            label7.Size = new Size(110, 38);
+            label7.TabIndex = 18;
+            label7.Text = "Logout";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(92, 326);
+            label6.Name = "label6";
+            label6.Size = new Size(124, 38);
+            label6.TabIndex = 17;
+            label6.Text = "Cashiers";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label5.Location = new Point(92, 242);
+            label5.Name = "label5";
+            label5.Size = new Size(132, 38);
+            label5.TabIndex = 16;
+            label5.Text = "Products";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(81, 160);
+            label4.Name = "label4";
+            label4.Size = new Size(155, 38);
+            label4.TabIndex = 15;
+            label4.Text = "Categories";
+            label4.Click += label4_Click;
             // 
             // AddAdminView
             // 
             AutoScaleDimensions = new SizeF(11F, 28F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1653, 950);
-            Controls.Add(AdminNavbar);
-            Controls.Add(addAdminBtn);
-            Controls.Add(passwordTxt);
-            Controls.Add(passwordLabel);
-            Controls.Add(numberTxt);
-            Controls.Add(numberLabel);
-            Controls.Add(emailTxt);
-            Controls.Add(emailLabel);
-            Controls.Add(nameTxt);
-            Controls.Add(nameLabel);
+            BackColor = Color.Linen;
+            ClientSize = new Size(1924, 1055);
+            Controls.Add(label9);
+            Controls.Add(label8);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(panel1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
+            Name = "AddAdminView";
             Text = "Add Admin";
-            AdminNavbar.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -198,9 +245,12 @@
         private TextBox passwordTxt;
         private Label passwordLabel;
         private Button addAdminBtn;
-        private TabControl AdminNavbar;
-        private TabPage home;
-        private TabPage ViewAdmins;
-        private TabPage adding;
+        private Panel panel1;
+        private Label label9;
+        private Label label8;
+        private Label label7;
+        private Label label6;
+        private Label label5;
+        private Label label4;
     }
 }

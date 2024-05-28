@@ -48,5 +48,10 @@ namespace SupermarketManagement.Views
             presenter.ApplyDiscount(code);
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 } 

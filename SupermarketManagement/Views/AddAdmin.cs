@@ -40,6 +40,16 @@ namespace SupermarketManagement
             presenter.addAdmin();
         }
 
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Category category = new Category();
+            category.Show();
+            this.Hide();
+        }
     }
 }
