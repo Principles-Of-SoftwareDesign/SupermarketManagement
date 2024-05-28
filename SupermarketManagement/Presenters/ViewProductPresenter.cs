@@ -104,5 +104,16 @@ namespace SupermarketManagement.Presenters
                 view.ProductQuantity = Convert.ToInt32(dataGridView.Rows[rowIndex].Cells[4].Value);
             }
         }
+
+        public void SearchProducts(string searchTerm)
+        {
+            var products = repository.SearchProducts(searchTerm);
+            productCollection = new ProductCollection();
+            foreach (var product in products)
+            {
+                productCollection.AddProduct(product);
+            }
+            view.DisplayProducts(productCollection.GetProducts());
+        }
     }
 }
