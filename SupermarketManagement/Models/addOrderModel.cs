@@ -1,43 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SupermarketManagement.Models
 {
-    public class addOrderModel
+    namespace SupermarketManagement.Models
     {
-        private string amount;
-        private string name;
-        private string price;
-        public addOrderModel()
+        public class addOrderModel
         {
-            amount = "0";
-            name = "";
-
-            price = "0";
+            public string Name { get; set; }
+            public decimal Amount { get; set; }
+            public decimal TotalPrice { get; set; }
         }
-        public string Amount
-        {
-            get { return amount; }
-            set { amount = value; }
-        }
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-        public string Price
-        {
-            get { return price; }
-            set { price = value; }
-
-
-        }
-
-
-
     }
+
 }

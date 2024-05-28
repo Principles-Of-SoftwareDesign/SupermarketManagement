@@ -1,37 +1,30 @@
 ﻿using SupermarketManagement.Presenters;
+using SupermarketManagement.Repositories;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SupermarketManagement.Views
 {
-    public partial class addOrder : Form , IAddOrderView
+    public partial class addOrder : Form, IAddOrderView
     {
-        private AddOrderPresenter presenter;
-        private IAddOrderView viewAdmins;
-
+        private readonly AddOrderPresenter presenter;
+        private Dictionary<string, decimal> products;
 
         public addOrder()
         {
             InitializeComponent();
             presenter = new AddOrderPresenter(this);
+            LoadProducts();
         }
 
-        public string Name => txtname.Text;
-        public string amount => txtquantity.Text;
-        public string price => txtprice.Text;
+        public string ProductName => cmbProduct.SelectedItem?.ToString() ?? string.Empty;
+        public string Amount => txtQuantity.Text;
 
         public void CloseForm()
         {
-            txtname.Text = string.Empty;
-            txtquantity.Text = string.Empty;
-            txtprice.Text = string.Empty;
+            cmbProduct.SelectedIndex = -1;
+            txtQuantity.Text = string.Empty;
         }
 
         public void ShowMessage(string message, string title)
@@ -39,11 +32,24 @@ namespace SupermarketManagement.Views
             MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //hide password + make validations////
-        private void addAdminBtn_Click(object sender, EventArgs e)
+        private void LoadProducts()
+        {
+            var repository = new OrderRepository();
+            var productList = repository.LoadProducts();
+            products = new Dictionary<string, decimal>();
+
+            cmbProduct.Items.Clear();
+            foreach (var product in productList)
+            {
+                products.Add(product.Name, Convert.ToDecimal(product.Price));
+                cmbProduct.Items.Add(product.Name);
+            }
+        }
+
+
+        private void addorderBtn_Click_1(object sender, EventArgs e)
         {
             presenter.addOrder();
         }
-
     }
 }
