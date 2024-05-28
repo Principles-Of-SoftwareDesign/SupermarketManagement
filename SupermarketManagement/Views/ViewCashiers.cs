@@ -11,21 +11,21 @@ namespace SupermarketManagement.Views
     public partial class ViewCashiers : Form, IViewCashiers
     {
         private ViewCashierPresenter presenter;
-        MySqlConnection conn;
-        MySqlCommand cmd;
-        MySqlDataReader reader;
-        dbConnection dbconn = new dbConnection();
+        //MySqlConnection conn;
+        //MySqlCommand cmd;
+        //MySqlDataReader reader;
+        //dbConnection dbconn = new dbConnection();
         public ViewCashiers()
         {
             InitializeComponent();
-            string connectionString = new dbConnection().connect();
+            //string connectionString = new dbConnection().connect();
             ICashierRepository repository = new CashierRepository();
             presenter = new ViewCashierPresenter(this, repository);
 
             //to display all categories when the form loads
             this.Load += new System.EventHandler(this.ViewCashiers_Load);
 
-            //dataGridView1.CellClick += new DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            dataGridView1.CellClick += new DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             //btn_add.Click += new System.EventHandler(this.btn_add_Click);
             //btn_update.Click += new System.EventHandler(this.btn_update_Click);
             //btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
@@ -33,7 +33,6 @@ namespace SupermarketManagement.Views
 
         public string Name
         {
-
             get => nameTxt.Text;
             set => nameTxt.Text = value;
         }
@@ -75,7 +74,7 @@ namespace SupermarketManagement.Views
             dataGridView1.Rows.Clear();
             foreach (var cashier in cashiers)
             {
-                dataGridView1.Rows.Add( cashier.Name,cashier.Email,cashier.PhoneNumber,cashier.Password);
+                dataGridView1.Rows.Add(cashier.Name, cashier.Email, cashier.PhoneNumber, cashier.Password);
             }
         }
         public void CloseForm()
@@ -132,6 +131,11 @@ namespace SupermarketManagement.Views
         private void button2_Click(object sender, EventArgs e)
         {
             presenter.addCashier();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            presenter.SelectCashier(e.RowIndex, dataGridView1);
         }
     }
 }
