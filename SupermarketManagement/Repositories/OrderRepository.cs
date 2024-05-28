@@ -13,7 +13,9 @@ namespace SupermarketManagement.Repositories
     public class OrderRepository : Repository, IOrderRepository
     {
         public event Action<string> OrderAdded;
-        public bool addOrder(addOrderModel order)
+
+
+        public bool addOrder(OrderModel order)
         {
             connection.Open();
             var cmd = new MySqlCommand("INSERT INTO orders (name, amount, TotalPrice) VALUES (@Name, @Amount, @TotalPrice)", connection);
@@ -71,17 +73,6 @@ namespace SupermarketManagement.Repositories
             }
             connection.Close();
             return price;
-        }
-
-        public bool AddCashier(CashierModel cashierModel)
-        {
-            throw new NotImplementedException();
-        }
-
-
-        List<string> IOrderRepository.LoadProducts()
-        {
-            throw new NotImplementedException();
         }
     }
 

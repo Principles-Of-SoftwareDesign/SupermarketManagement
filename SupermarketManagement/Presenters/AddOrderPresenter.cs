@@ -34,7 +34,7 @@ namespace SupermarketManagement.Presenters
             decimal price = repository.GetProductPrice(view.ProductName);
             decimal totalPrice = amount * price;
 
-            var order = new Models.SupermarketManagement.Models.addOrderModel()
+            var order = new Models.SupermarketManagement.Models.OrderModel()
             {
                 Name = view.ProductName,
                 Amount = amount,

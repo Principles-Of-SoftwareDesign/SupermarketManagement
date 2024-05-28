@@ -8,7 +8,6 @@ namespace SupermarketManagement.Presenters
 {
     public interface IInvoicePresenter
     {
-        void CalculateTotalPrice();
         void ApplyDiscount(string code);
     }
 }

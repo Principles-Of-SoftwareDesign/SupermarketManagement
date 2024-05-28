@@ -10,6 +10,7 @@ namespace SupermarketManagement.Views
     {
         string ProductName { get; }
         string Amount { get; }
+
         void ShowMessage(string message, string title);
         void CloseForm();
     }
