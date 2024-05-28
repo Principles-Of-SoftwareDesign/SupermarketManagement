@@ -43,4 +43,5 @@ namespace SupermarketManagement.Views
             presenter.LoadProducts();
         }
     }
+
 }

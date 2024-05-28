@@ -32,4 +32,5 @@ namespace SupermarketManagement.Iterators
             return products;
         }
     }
+
 }
