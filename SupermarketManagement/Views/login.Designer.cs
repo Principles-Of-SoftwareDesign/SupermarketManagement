@@ -156,6 +156,7 @@
             Margin = new Padding(2);
             Name = "login";
             Text = "login";
+           
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

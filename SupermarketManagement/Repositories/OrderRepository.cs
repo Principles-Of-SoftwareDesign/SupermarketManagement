@@ -4,6 +4,9 @@ using SupermarketManagement.Models;
 using SupermarketManagement.Models.SupermarketManagement.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace SupermarketManagement.Repositories
 {
@@ -18,7 +21,7 @@ namespace SupermarketManagement.Repositories
             cmd.Parameters.AddWithValue("@TotalPrice", order.TotalPrice);
 
             int rowsAffected = cmd.ExecuteNonQuery();
-            connection.Close();
+            CloseConnection();
 
             return rowsAffected > 0;
         }

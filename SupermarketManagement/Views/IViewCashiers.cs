@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SupermarketManagement.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace SupermarketManagement.Views
 {
     public interface IViewCashiers
     {
-        public int Id { get; set; }
+  
         public string Name { get; set; }
         public string Email { get; set; }
         public string Password { get; set; }
@@ -16,6 +17,10 @@ namespace SupermarketManagement.Views
 
         //Methods (For Forms)
         void setCashiersList(BindingSource cashiersList);
+        void ShowMessage(string message, string title);
+        void CloseForm();
+        void DisplayCashiers(IEnumerable<CashierModel> cashiers);
+        //void DisplayCashiers(IEnumerable<CashierModel> cashiers);
     }
 }
 

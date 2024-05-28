@@ -7,6 +7,8 @@ namespace SupermarketManagement
 {
     internal static class Program
     {
+        private static ViewCashiers view;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>
@@ -17,7 +19,8 @@ namespace SupermarketManagement
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
          
-            Application.Run(new addOrder());
+            //Application.Run(new login());
+            Application.Run(new ViewProduct());
         }
     }
 }
