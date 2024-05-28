@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SupermarketManagement.Models;
 using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
 using SupermarketManagement.Config;
-using SupermarketManagement.Models;
 
 namespace SupermarketManagement.Repositories
 {
@@ -19,17 +16,18 @@ namespace SupermarketManagement.Repositories
             reader = cmd.ExecuteReader();
             while (reader.Read())
             {
-                var product = new ProductModel();
-                product.Id = (int)reader["id"];
-                product.Name = reader["name"].ToString();
-                product.Category = reader["category"].ToString();
-                product.Price = Convert.ToDouble(reader["price"]);
-                product.Quantity = (int)reader["quantity"];
+                var product = new ProductModel
+                {
+                    Id = (int)reader["id"],
+                    Name = reader["name"].ToString(),
+                    Category = reader["category"].ToString(),
+                    Price = Convert.ToDouble(reader["price"]),
+                    Quantity = (int)reader["quantity"]
+                };
                 products.Add(product);
             }
             reader.Close();
             CloseConnection();
-
             return products;
         }
 
@@ -71,6 +69,30 @@ namespace SupermarketManagement.Repositories
             int result = cmd.ExecuteNonQuery();
             CloseConnection();
             return result > 0;
+        }
+
+        public IEnumerable<ProductModel> SearchProducts(string searchTerm)
+        {
+            var products = new List<ProductModel>();
+            OpenConnection();
+            cmd = new MySqlCommand("SELECT * FROM `products` WHERE `name` LIKE @searchTerm OR `category` LIKE @searchTerm", connection);
+            cmd.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var product = new ProductModel
+                {
+                    Id = (int)reader["id"],
+                    Name = reader["name"].ToString(),
+                    Category = reader["category"].ToString(),
+                    Price = Convert.ToDouble(reader["price"]),
+                    Quantity = (int)reader["quantity"]
+                };
+                products.Add(product);
+            }
+            reader.Close();
+            CloseConnection();
+            return products;
         }
     }
 }
