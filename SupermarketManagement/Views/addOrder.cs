@@ -52,6 +52,10 @@ namespace SupermarketManagement.Views
         private void addorderBtn_Click_1(object sender, EventArgs e)
         {
             presenter.addOrder();
+
+            Invoice invoice = new Invoice();
+            invoice.Show();
+            this.Hide();
         }
         public void ShowOrderConfirmation(string productName, string quantity, decimal totalPrice)
         {

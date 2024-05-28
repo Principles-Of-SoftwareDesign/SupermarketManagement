@@ -207,5 +207,17 @@ namespace SupermarketManagement
         {
 
         }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+           ViewAdmins viewAdmins = new ViewAdmins();
+            viewAdmins.Show();
+            this.Hide();    
+        }
+
+        private void Category_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

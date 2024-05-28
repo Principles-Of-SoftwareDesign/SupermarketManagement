@@ -63,5 +63,12 @@ namespace SupermarketManagement
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            Category category = new Category();
+            category.Show();
+            this.Hide();
+        }
     }
 }
