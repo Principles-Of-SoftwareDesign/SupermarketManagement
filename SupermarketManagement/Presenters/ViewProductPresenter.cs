@@ -14,7 +14,7 @@ namespace SupermarketManagement.Presenters
         public ViewProductPresenter(IProductView view)
         {
             this.view = view;
-            this.productRepository = new ProductRepository();  
+            this.productRepository = new ProductRepository();
         }
 
         public void LoadProducts()
@@ -32,4 +32,5 @@ namespace SupermarketManagement.Presenters
             }
         }
     }
+
 }
