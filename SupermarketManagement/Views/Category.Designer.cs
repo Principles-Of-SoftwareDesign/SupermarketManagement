@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             txt_name = new TextBox();
@@ -46,6 +46,7 @@
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
+            label9 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -82,7 +83,7 @@
             // 
             btn_add.BackColor = Color.FromArgb(255, 192, 192);
             btn_add.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_add.Location = new Point(321, 153);
+            btn_add.Location = new Point(321, 180);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(116, 37);
             btn_add.TabIndex = 4;
@@ -97,14 +98,14 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = SystemColors.Window;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
             dataGridView1.Location = new Point(0, 267);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -141,7 +142,7 @@
             // 
             btn_update.BackColor = Color.FromArgb(255, 192, 192);
             btn_update.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_update.Location = new Point(521, 153);
+            btn_update.Location = new Point(519, 180);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(94, 37);
             btn_update.TabIndex = 6;
@@ -153,7 +154,7 @@
             // 
             btn_delete.BackColor = Color.FromArgb(255, 192, 192);
             btn_delete.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btn_delete.Location = new Point(672, 153);
+            btn_delete.Location = new Point(672, 180);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(94, 37);
             btn_delete.TabIndex = 7;
@@ -181,7 +182,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(22, 104);
+            label3.Location = new Point(19, 83);
             label3.Name = "label3";
             label3.Size = new Size(159, 38);
             label3.TabIndex = 8;
@@ -191,7 +192,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(22, 182);
+            label4.Location = new Point(19, 145);
             label4.Name = "label4";
             label4.Size = new Size(155, 38);
             label4.TabIndex = 9;
@@ -202,7 +203,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(30, 256);
+            label5.Location = new Point(30, 227);
             label5.Name = "label5";
             label5.Size = new Size(132, 38);
             label5.TabIndex = 10;
@@ -212,7 +213,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(30, 345);
+            label6.Location = new Point(30, 311);
             label6.Name = "label6";
             label6.Size = new Size(124, 38);
             label6.TabIndex = 11;
@@ -232,11 +233,21 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(37, 420);
+            label8.Location = new Point(19, 383);
             label8.Name = "label8";
-            label8.Size = new Size(117, 38);
+            label8.Size = new Size(167, 38);
             label8.TabIndex = 13;
-            label8.Text = "Admins";
+            label8.Text = "Add Admin";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.Location = new Point(12, 474);
+            label9.Name = "label9";
+            label9.Size = new Size(189, 38);
+            label9.TabIndex = 14;
+            label9.Text = "View Admins";
             // 
             // Category
             // 
@@ -244,6 +255,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Linen;
             ClientSize = new Size(1365, 672);
+            Controls.Add(label9);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -279,5 +291,6 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private Label label8;
+        private Label label9;
     }
 }
