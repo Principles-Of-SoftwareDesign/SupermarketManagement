@@ -8,11 +8,9 @@ namespace SupermarketManagement.Views
 {
     public interface IAddOrderView
     {
-        string Name { get; }
-        string price { get; }
-        string amount { get; }
+        string ProductName { get; }
+        string Amount { get; }
         void ShowMessage(string message, string title);
         void CloseForm();
     }
 }
-

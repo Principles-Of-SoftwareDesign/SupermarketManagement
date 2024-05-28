@@ -1,4 +1,5 @@
 ﻿using SupermarketManagement.Models;
+using SupermarketManagement.Models.SupermarketManagement.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,10 @@ namespace SupermarketManagement.Repositories
 {
     public interface IOrderRepository
     {
-        bool addOrder(OrderModel orderModel);
+        bool addOrder(addOrderModel order);
+        List<string> LoadProducts();
+        decimal GetProductPrice(string productName);
+        bool AddCashier(CashierModel cashierModel);
 
     }
 }

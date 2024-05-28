@@ -2,17 +2,13 @@
 using SupermarketManagement.Repositories;
 using SupermarketManagement.Views;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SupermarketManagement.Presenters
 {
     public class AddOrderPresenter
     {
-        private IAddOrderView view;
-        private IOrderRepository repository;
+        private readonly IAddOrderView view;
+        private readonly IOrderRepository repository;
 
         public AddOrderPresenter(IAddOrderView view)
         {
@@ -22,29 +18,42 @@ namespace SupermarketManagement.Presenters
 
         public void addOrder()
         {
-            if (string.IsNullOrWhiteSpace(view.Name) ||
-                string.IsNullOrWhiteSpace(view.amount) ||
-                string.IsNullOrWhiteSpace(view.price))
+            if (string.IsNullOrWhiteSpace(view.ProductName) ||
+                string.IsNullOrWhiteSpace(view.Amount))
             {
-                view.ShowMessage("Warning: All fields are required.", "Add Cashier");
+                view.ShowMessage("Warning: All fields are required.", "Add Order");
                 return;
             }
 
-            var order = new OrderModel
+            if (!decimal.TryParse(view.Amount, out decimal amount))
             {
-                Name = view.Name,
-                
+                view.ShowMessage("Error: Invalid amount format.", "Add Order");
+                return;
+            }
+
+            decimal price = repository.GetProductPrice(view.ProductName);
+            decimal totalPrice = amount * price;
+
+            var order = new Models.SupermarketManagement.Models.addOrderModel()
+            {
+                Name = view.ProductName,
+                Amount = amount,
+                TotalPrice = totalPrice
             };
 
             if (repository.addOrder(order))
             {
+                // Display order confirmation message
+                view.ShowMessage($"Order added for {order.Name}, Quantity: {order.Amount}, Total Price: {order.TotalPrice}", "Order Confirmation");
+
+                // Close the form
                 view.CloseForm();
             }
             else
             {
-                view.ShowMessage("Error: No rows were affected.", "Add cashier");
+                view.ShowMessage("Error: No rows were affected.", "Add Order");
             }
         }
+
     }
 }
-

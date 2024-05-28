@@ -29,81 +29,61 @@
         private void InitializeComponent()
         {
             addorderBtn = new Button();
-            txtprice = new TextBox();
-            priceLabel = new Label();
-            txtquantity = new TextBox();
+            txtQuantity = new TextBox();
             quantityLabel = new Label();
-            txtname = new TextBox();
-            name = new Label();
+            cmbProduct = new ComboBox();
+            productLabel = new Label();
             SuspendLayout();
             // 
             // addorderBtn
             // 
             addorderBtn.BackColor = SystemColors.HotTrack;
             addorderBtn.ForeColor = Color.White;
-            addorderBtn.Location = new Point(264, 352);
+            addorderBtn.Location = new Point(288, 359);
             addorderBtn.Margin = new Padding(4);
             addorderBtn.Name = "addorderBtn";
-            addorderBtn.Size = new Size(291, 60);
+            addorderBtn.Size = new Size(181, 60);
             addorderBtn.TabIndex = 28;
             addorderBtn.Text = "Add Order";
             addorderBtn.UseVisualStyleBackColor = false;
-            addorderBtn.Click += addAdminBtn_Click;
+            addorderBtn.Click += addorderBtn_Click_1;
             // 
-            // txtprice
+            // txtQuantity
             // 
-            txtprice.Location = new Point(288, 249);
-            txtprice.Margin = new Padding(4);
-            txtprice.Name = "txtprice";
-            txtprice.Size = new Size(408, 31);
-            txtprice.TabIndex = 27;
-            
-            // 
-            // priceLabel
-            // 
-            priceLabel.AutoSize = true;
-            priceLabel.Location = new Point(88, 255);
-            priceLabel.Margin = new Padding(5, 0, 5, 0);
-            priceLabel.Name = "priceLabel";
-            priceLabel.Size = new Size(53, 25);
-            priceLabel.TabIndex = 26;
-            priceLabel.Text = "Price:";
-            // 
-            // txtquantity
-            // 
-            txtquantity.Location = new Point(288, 165);
-            txtquantity.Margin = new Padding(4);
-            txtquantity.Name = "txtquantity";
-            txtquantity.Size = new Size(408, 31);
-            txtquantity.TabIndex = 25;
+            txtQuantity.Location = new Point(288, 165);
+            txtQuantity.Margin = new Padding(4);
+            txtQuantity.Name = "txtQuantity";
+            txtQuantity.Size = new Size(408, 31);
+            txtQuantity.TabIndex = 25;
             // 
             // quantityLabel
             // 
             quantityLabel.AutoSize = true;
-            quantityLabel.Location = new Point(88, 165);
+            quantityLabel.Location = new Point(264, 122);
             quantityLabel.Margin = new Padding(5, 0, 5, 0);
             quantityLabel.Name = "quantityLabel";
             quantityLabel.Size = new Size(84, 25);
             quantityLabel.TabIndex = 24;
             quantityLabel.Text = "Quantity:";
             // 
-            // txtname
+            // cmbProduct
             // 
-            txtname.Location = new Point(288, 74);
-            txtname.Margin = new Padding(4);
-            txtname.Name = "txtname";
-            txtname.Size = new Size(408, 31);
-            txtname.TabIndex = 23;
+            cmbProduct.FormattingEnabled = true;
+            cmbProduct.Location = new Point(288, 74);
+            cmbProduct.Margin = new Padding(4);
+            cmbProduct.Name = "cmbProduct";
+            cmbProduct.Size = new Size(408, 33);
+            cmbProduct.TabIndex = 23;
             // 
-            // name
+            // productLabel
             // 
-            name.AutoSize = true;
-            name.Location = new Point(88, 74);
-            name.Margin = new Padding(5, 0, 5, 0);
-            name.Name = "name";
-            name.Size = new Size(111, 25);
-            name.TabIndex = 22;
-            name.Text = "Order name:";
+            productLabel.AutoSize = true;
+            productLabel.Location = new Point(264, 28);
+            productLabel.Margin = new Padding(5, 0, 5, 0);
+            productLabel.Name = "productLabel";
+            productLabel.Size = new Size(78, 25);
+            productLabel.TabIndex = 22;
+            productLabel.Text = "Product:";
             // 
             // addOrder
             // 
@@ -111,12 +91,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(addorderBtn);
-            Controls.Add(txtprice);
-            Controls.Add(priceLabel);
-            Controls.Add(txtquantity);
+            Controls.Add(txtQuantity);
             Controls.Add(quantityLabel);
-            Controls.Add(txtname);
-            Controls.Add(name);
+            Controls.Add(cmbProduct);
+            Controls.Add(productLabel);
+            Name = "addOrder";
             Text = "addOrder";
             ResumeLayout(false);
             PerformLayout();
@@ -125,11 +104,9 @@
         #endregion
 
         private Button addorderBtn;
-        private TextBox txtprice;
-        private Label priceLabel;
-        private TextBox txtquantity;
+        private TextBox txtQuantity;
         private Label quantityLabel;
-        private TextBox txtname;
-        private Label name;
+        private ComboBox cmbProduct;
+        private Label productLabel;
     }
 }
