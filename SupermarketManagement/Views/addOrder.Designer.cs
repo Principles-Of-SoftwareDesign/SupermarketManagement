@@ -33,16 +33,19 @@
             quantityLabel = new Label();
             cmbProduct = new ComboBox();
             productLabel = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // addorderBtn
             // 
-            addorderBtn.BackColor = SystemColors.Highlight;
-            addorderBtn.ForeColor = Color.White;
-            addorderBtn.Location = new Point(544, 290);
-            addorderBtn.Margin = new Padding(4);
+            addorderBtn.BackColor = Color.FromArgb(255, 192, 192);
+            addorderBtn.Font = new Font("Segoe UI Semibold", 15.9000006F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            addorderBtn.ForeColor = Color.Black;
+            addorderBtn.Location = new Point(703, 879);
+            addorderBtn.Margin = new Padding(7, 7, 7, 7);
             addorderBtn.Name = "addorderBtn";
-            addorderBtn.Size = new Size(181, 60);
+            addorderBtn.Size = new Size(421, 98);
             addorderBtn.TabIndex = 28;
             addorderBtn.Text = "Add Order";
             addorderBtn.UseVisualStyleBackColor = false;
@@ -50,59 +53,74 @@
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(199, 189);
-            txtQuantity.Margin = new Padding(4);
+            txtQuantity.Location = new Point(853, 522);
+            txtQuantity.Margin = new Padding(7, 7, 7, 7);
             txtQuantity.Name = "txtQuantity";
-            txtQuantity.Size = new Size(408, 31);
+            txtQuantity.Size = new Size(691, 47);
             txtQuantity.TabIndex = 25;
             // 
             // quantityLabel
             // 
             quantityLabel.AutoSize = true;
-            quantityLabel.ForeColor = SystemColors.Highlight;
-            quantityLabel.Location = new Point(49, 189);
-            quantityLabel.Margin = new Padding(5, 0, 5, 0);
+            quantityLabel.Font = new Font("Segoe UI Semibold", 15.9000006F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            quantityLabel.ForeColor = SystemColors.Desktop;
+            quantityLabel.Location = new Point(350, 497);
+            quantityLabel.Margin = new Padding(8, 0, 8, 0);
             quantityLabel.Name = "quantityLabel";
-            quantityLabel.Size = new Size(84, 25);
+            quantityLabel.Size = new Size(257, 72);
             quantityLabel.TabIndex = 24;
             quantityLabel.Text = "Quantity:";
             // 
             // cmbProduct
             // 
             cmbProduct.FormattingEnabled = true;
-            cmbProduct.Location = new Point(199, 101);
-            cmbProduct.Margin = new Padding(4);
+            cmbProduct.Location = new Point(853, 259);
+            cmbProduct.Margin = new Padding(7, 7, 7, 7);
             cmbProduct.Name = "cmbProduct";
-            cmbProduct.Size = new Size(408, 33);
+            cmbProduct.Size = new Size(691, 49);
             cmbProduct.TabIndex = 23;
             // 
             // productLabel
             // 
             productLabel.AutoSize = true;
-            productLabel.ForeColor = SystemColors.Highlight;
-            productLabel.Location = new Point(55, 101);
-            productLabel.Margin = new Padding(5, 0, 5, 0);
+            productLabel.Font = new Font("Segoe UI Semibold", 15.9000006F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            productLabel.ForeColor = SystemColors.Desktop;
+            productLabel.Location = new Point(350, 250);
+            productLabel.Margin = new Padding(8, 0, 8, 0);
             productLabel.Name = "productLabel";
-            productLabel.Size = new Size(78, 25);
+            productLabel.Size = new Size(237, 72);
             productLabel.TabIndex = 22;
             productLabel.Text = "Product:";
             productLabel.Click += productLabel_Click;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.White;
+            panel1.Controls.Add(addorderBtn);
+            panel1.Controls.Add(quantityLabel);
+            panel1.Controls.Add(txtQuantity);
+            panel1.Controls.Add(cmbProduct);
+            panel1.Controls.Add(productLabel);
+            panel1.ForeColor = Color.White;
+            panel1.Location = new Point(825, 115);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1790, 1289);
+            panel1.TabIndex = 29;
+            panel1.Paint += panel1_Paint;
+            // 
             // addOrder
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(800, 450);
-            Controls.Add(addorderBtn);
-            Controls.Add(txtQuantity);
-            Controls.Add(quantityLabel);
-            Controls.Add(cmbProduct);
-            Controls.Add(productLabel);
+            BackColor = Color.Linen;
+            ClientSize = new Size(2785, 1507);
+            Controls.Add(panel1);
+            Margin = new Padding(5, 5, 5, 5);
             Name = "addOrder";
             Text = "addOrder";
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -112,5 +130,6 @@
         private Label quantityLabel;
         private ComboBox cmbProduct;
         private Label productLabel;
+        private Panel panel1;
     }
 }

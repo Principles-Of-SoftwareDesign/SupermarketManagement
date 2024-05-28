@@ -40,6 +40,9 @@ namespace SupermarketManagement
             presenter.addAdmin();
         }
 
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -66,5 +66,10 @@ namespace SupermarketManagement.Views
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
