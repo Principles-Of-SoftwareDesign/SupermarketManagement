@@ -12,17 +12,34 @@ namespace SupermarketManagement.Repositories
 {
     public class CashierRepository : Repository, ICashierRepository
     {
-        public void EditCashier(CashierModel cashierModel)
+        public IEnumerable<CashierModel> GetAllCashiers()
         {
-            throw new NotImplementedException();
+            var cashiers = new List<CashierModel>();
+            //connection.Open();
+            OpenConnection();
+            cmd = new MySqlCommand("SELECT * FROM `users` WHERE role=0", connection);
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var cashierModel = new CashierModel();
+                //cashierModel.Id = (int)reader["id"];
+                cashierModel.Name = reader["name"].ToString();
+                cashierModel.Email = reader["email"].ToString();
+                cashierModel.PhoneNumber = reader["phone_number"].ToString();
+                cashierModel.Password = reader["password"].ToString();
+                cashiers.Add(cashierModel);
+            }
+            reader.Close();
+            CloseConnection();
+            //connection.Close();
+            return cashiers;
         }
-
-       
 
         public bool addCashier(CashierModel cashier)
         {
-            //OpenConnection();
-            var cmd = new MySqlCommand("INSERT INTO users (name, email, phone_number, password, role) VALUES (@Name, @Email, @PhoneNumber, @Password, @Role)", connection);
+            OpenConnection();
+            var cmd = new MySqlCommand("INSERT INTO `users` (`name`, `email`, `phone_number`, `password`, `role`) VALUES (@Name, @Email, @PhoneNumber, @Password, @Role)", connection);
+            cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@Name", cashier.Name);
             cmd.Parameters.AddWithValue("@Email", cashier.Email);
             cmd.Parameters.AddWithValue("@PhoneNumber", cashier.PhoneNumber);
@@ -30,34 +47,34 @@ namespace SupermarketManagement.Repositories
             cmd.Parameters.AddWithValue("@Role", cashier.Role);
 
             int rowsAffected = cmd.ExecuteNonQuery();
-           // CloseConnection();
+           CloseConnection();
 
             return rowsAffected > 0;
         }
-
+        
 
         public bool UpdateCashier(CashierModel cashier)
         {
             connection.Open();
-            MySqlCommand cmd = new MySqlCommand("UPDATE `users` SET `name`=@name,`email`=@email,`password`=@password,`phone_number`=@phone_number WHERE `name`=@name", connection);
+            MySqlCommand cmd = new MySqlCommand("UPDATE `users` SET `name`=@name,`email`=@email,`phone_number`=@phone_number, `password`=@password WHERE `name`=@name", connection);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@name", cashier.Name);
             cmd.Parameters.AddWithValue("@email", cashier.Email);
-            cmd.Parameters.AddWithValue("@password", cashier.Password);
             cmd.Parameters.AddWithValue("@phone_number", cashier.PhoneNumber);
-            int i = cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@password", cashier.Password);
+            int rowsAffected = cmd.ExecuteNonQuery();
             connection.Close();
-            return i > 0;
+            return rowsAffected > 0;
         }
         public bool DeleteCashier(String cashierName)
         {
             connection.Open();
             MySqlCommand cmd = new MySqlCommand("DELETE FROM `users` WHERE `name`=@name", connection);
             cmd.Parameters.Clear();
-           cmd.Parameters.AddWithValue("@name", cashierName);
-            int result = cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@name", cashierName);
+            int rowsAffected = cmd.ExecuteNonQuery();
             connection.Close();
-            return result > 0;
+            return rowsAffected > 0;
         }
 
     }
