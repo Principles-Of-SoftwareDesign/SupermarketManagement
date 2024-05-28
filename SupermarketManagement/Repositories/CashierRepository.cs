@@ -76,8 +76,6 @@ namespace SupermarketManagement.Repositories
             connection.Close();
             return rowsAffected > 0;
         }
-
-       
     }
 }
 
