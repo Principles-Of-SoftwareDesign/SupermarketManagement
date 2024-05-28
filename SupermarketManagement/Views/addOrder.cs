@@ -61,5 +61,9 @@ namespace SupermarketManagement.Views
                             MessageBoxIcon.Information);
         }
 
+        private void productLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
