@@ -60,6 +60,10 @@ namespace SupermarketManagement.Repositories
             return result > 0;
         }
 
+        public IEnumerable<CashierModel> GetAllCashiers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 
