@@ -35,7 +35,7 @@ namespace SupermarketManagement
             dataGridView1.Rows.Clear();
             foreach (var product in products)
             {
-                dataGridView1.Rows.Add(product.Id, product.Name, product.Category, product.Price, product.Quantity);
+                 dataGridView1.Rows.Add(product.Id, product.Name, product.Category, product.Price, product.Quantity);
             }
         }
 
