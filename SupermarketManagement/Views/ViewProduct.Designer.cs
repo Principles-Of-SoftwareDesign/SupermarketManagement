@@ -43,11 +43,19 @@
             this.lbl_category = new System.Windows.Forms.Label();
             this.lbl_price = new System.Windows.Forms.Label();
             this.lbl_quantity = new System.Windows.Forms.Label();
+
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
 
             // dataGridView1
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+                new System.Windows.Forms.DataGridViewTextBoxColumn { HeaderText = "ID", DataPropertyName = "Id" },
+                new System.Windows.Forms.DataGridViewTextBoxColumn { HeaderText = "Name", DataPropertyName = "Name" },
+                new System.Windows.Forms.DataGridViewTextBoxColumn { HeaderText = "Category", DataPropertyName = "Category" },
+                new System.Windows.Forms.DataGridViewTextBoxColumn { HeaderText = "Price", DataPropertyName = "Price" },
+                new System.Windows.Forms.DataGridViewTextBoxColumn { HeaderText = "Quantity", DataPropertyName = "Quantity" }
+            });
             this.dataGridView1.Location = new System.Drawing.Point(300, 20);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(480, 400);

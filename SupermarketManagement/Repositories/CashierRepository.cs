@@ -56,7 +56,7 @@ namespace SupermarketManagement.Repositories
         public bool UpdateCashier(CashierModel cashier)
         {
             connection.Open();
-            MySqlCommand cmd = new MySqlCommand("UPDATE `users` SET `name`=@name,`email`=@email,`phone_number`=@phone_number, `password`=@password WHERE `name`=@name", connection);
+            var cmd = new MySqlCommand("UPDATE `users` SET `name`=@name,`email`=@email,`phone_number`=@phone_number, `password`=@password WHERE `name`=@name", connection);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@name", cashier.Name);
             cmd.Parameters.AddWithValue("@email", cashier.Email);
