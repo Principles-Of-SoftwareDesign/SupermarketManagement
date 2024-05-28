@@ -10,9 +10,11 @@ namespace SupermarketManagement.Repositories
     public interface ICashierRepository
     {
         bool addCashier(CashierModel cashierModel);
-        void EditCashier(CashierModel cashierModel);
+        //void EditCashier(CashierModel cashierModel);
         IEnumerable<CashierModel> GetAllCashiers();
-
+        bool UpdateCashier(CashierModel cashier);
+        bool DeleteCashier(String cashierName);
+     
     }
 }
 

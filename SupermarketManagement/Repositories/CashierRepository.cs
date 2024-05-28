@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using Mysqlx.Crud;
 using SupermarketManagement.Config;
 using SupermarketManagement.Models;
 using System;
@@ -60,9 +61,32 @@ namespace SupermarketManagement.Repositories
             return rowsAffected > 0;
         }
 
-        public bool AddCashier(CashierModel cashierModel)
+
+        public bool UpdateCashier(CashierModel cashier)
         {
-            throw new NotImplementedException();
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("UPDATE `users` SET `name`=@name,`email`=@email,`password`=@password,`phone_number`=@phone_number WHERE `name`=@name", connection);
+            cmd.Parameters.Clear();
+            cmd.Parameters.AddWithValue("@name", cashier.Name);
+            cmd.Parameters.AddWithValue("@email", cashier.Email);
+            cmd.Parameters.AddWithValue("@password", cashier.Password);
+            cmd.Parameters.AddWithValue("@phone_number", cashier.PhoneNumber);
+            int i = cmd.ExecuteNonQuery();
+            connection.Close();
+            return i > 0;
         }
+        public bool DeleteCashier(String cashierName)
+        {
+            connection.Open();
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM `users` WHERE `name`=@name", connection);
+            cmd.Parameters.Clear();
+           cmd.Parameters.AddWithValue("@name", cashierName);
+            int result = cmd.ExecuteNonQuery();
+            connection.Close();
+            return result > 0;
+        }
+
     }
 }
+
+
