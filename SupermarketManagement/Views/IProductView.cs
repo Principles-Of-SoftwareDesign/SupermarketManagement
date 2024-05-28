@@ -7,12 +7,9 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagement.Views
 {
-    public interface ICategoryView
+    public interface IProductView
     {
-        void DisplayCategories(IEnumerable<CategoryModel> categories);
-        string CategoryId { get; set; }
-        string CategoryName { get; set; }
+        void DisplayProducts(BindingSource productsList);
         void ShowMessage(string message, string title);
-        void ClearFields();
     }
 }

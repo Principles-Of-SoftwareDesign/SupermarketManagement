@@ -11,18 +11,10 @@ namespace SupermarketManagement.Repositories
 {
     public class CategoryRepository : Repository , ICategoryRepository
     {
-        private MySqlCommand cmd;
-        private MySqlDataReader reader;
-        private dbConnection dbconnection = new dbConnection();
-        public CategoryRepository()
-        {
-            this.connection = new MySqlConnection(dbconnection.connect());
-        }
-
         public IEnumerable<CategoryModel> GetAllCategories()
         {
             var categories = new List<CategoryModel>();
-            connection.Open();
+            OpenConnection();
             cmd = new MySqlCommand("SELECT * FROM `category`", connection);
             reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -40,40 +32,40 @@ namespace SupermarketManagement.Repositories
                 //});
             }
             reader.Close();
-            connection.Close();
+            CloseConnection();
 
             return categories;
         }
         public bool AddCategory(CategoryModel category)
         {
-            connection.Open();
+            OpenConnection();
             cmd = new MySqlCommand("INSERT INTO `category`(`category_id`, `name`) VALUES (@category_id, @name)", connection);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@category_id", category.CategoryID);
             cmd.Parameters.AddWithValue("@name", category.Name);
             int i = cmd.ExecuteNonQuery();
-            connection.Close();
+            CloseConnection();
             return i > 0;
         }
         public bool UpdateCategory(CategoryModel category)
         {
-            connection.Open();
+            OpenConnection();
             MySqlCommand cmd = new MySqlCommand("UPDATE `category` SET `name`=@name WHERE `category_id`=@category_id", connection);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@category_id", category.CategoryID);
             cmd.Parameters.AddWithValue("@name", category.Name);
             int i = cmd.ExecuteNonQuery();
-            connection.Close();
+            CloseConnection();
             return i > 0;
         }
         public bool DeleteCategory(int categoryId)
         {
-            connection.Open();
+            OpenConnection();
             MySqlCommand cmd = new MySqlCommand("DELETE FROM `category` WHERE `category_id`=@category_id", connection);
             cmd.Parameters.Clear();
             cmd.Parameters.AddWithValue("@category_id", categoryId);
             int result = cmd.ExecuteNonQuery();
-            connection.Close();
+            CloseConnection();
             return result > 0;
         }
 
