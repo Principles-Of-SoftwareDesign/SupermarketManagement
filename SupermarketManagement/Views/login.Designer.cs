@@ -48,7 +48,7 @@
             button1.BackColor = SystemColors.Highlight;
             button1.ForeColor = SystemColors.ButtonHighlight;
             button1.Location = new Point(561, 357);
-            button1.Margin = new Padding(2, 2, 2, 2);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
             button1.Size = new Size(197, 27);
             button1.TabIndex = 18;
@@ -60,7 +60,7 @@
             // 
             panel2.BackColor = SystemColors.Highlight;
             panel2.Location = new Point(552, 294);
-            panel2.Margin = new Padding(2, 2, 2, 2);
+            panel2.Margin = new Padding(2);
             panel2.Name = "panel2";
             panel2.Size = new Size(240, 2);
             panel2.TabIndex = 17;
@@ -69,7 +69,7 @@
             // 
             panel1.BackColor = SystemColors.Highlight;
             panel1.Location = new Point(550, 257);
-            panel1.Margin = new Padding(2, 2, 2, 2);
+            panel1.Margin = new Padding(2);
             panel1.Name = "panel1";
             panel1.Size = new Size(240, 2);
             panel1.TabIndex = 16;
@@ -78,7 +78,7 @@
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(500, 235);
-            pictureBox2.Margin = new Padding(2, 2, 2, 2);
+            pictureBox2.Margin = new Padding(2);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(32, 25);
             pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
@@ -89,7 +89,7 @@
             // 
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
             pictureBox3.Location = new Point(500, 272);
-            pictureBox3.Margin = new Padding(2, 2, 2, 2);
+            pictureBox3.Margin = new Padding(2);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(32, 25);
             pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
@@ -112,16 +112,17 @@
             // 
             txtpassword.BorderStyle = BorderStyle.None;
             txtpassword.Location = new Point(552, 269);
-            txtpassword.Margin = new Padding(2, 2, 2, 2);
+            txtpassword.Margin = new Padding(2);
             txtpassword.Name = "txtpassword";
             txtpassword.Size = new Size(238, 20);
             txtpassword.TabIndex = 12;
+            txtpassword.UseSystemPasswordChar = true;
             // 
             // txtUserName
             // 
             txtUserName.BorderStyle = BorderStyle.None;
             txtUserName.Location = new Point(550, 235);
-            txtUserName.Margin = new Padding(2, 2, 2, 2);
+            txtUserName.Margin = new Padding(2);
             txtUserName.Name = "txtUserName";
             txtUserName.Size = new Size(240, 20);
             txtUserName.TabIndex = 11;
@@ -130,7 +131,7 @@
             // 
             pictureBox1.Image = Properties.Resources.Capture;
             pictureBox1.Location = new Point(618, 94);
-            pictureBox1.Margin = new Padding(2, 2, 2, 2);
+            pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(49, 43);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -152,9 +153,10 @@
             Controls.Add(txtpassword);
             Controls.Add(txtUserName);
             Controls.Add(pictureBox1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "login";
             Text = "login";
+           
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

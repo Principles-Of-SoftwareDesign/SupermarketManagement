@@ -1,8 +1,5 @@
-using MySql.Data.MySqlClient;
-using SupermarketManagement.Config;
 using SupermarketManagement.Presenters;
 using SupermarketManagement.Views;
-using System.Windows.Forms;
 
 namespace SupermarketManagement
 {
@@ -16,7 +13,6 @@ namespace SupermarketManagement
         {
             InitializeComponent();
             presenter = new AddAdminPresenter(this);
-            passwordTxt.PasswordChar = '*';
         }
 
         public string Name => nameTxt.Text;
@@ -38,12 +34,12 @@ namespace SupermarketManagement
             MessageBox.Show(message, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        //hide password + make validations////
+        // make validations////
         private void addAdminBtn_Click(object sender, EventArgs e)
         {
             presenter.addAdmin();
         }
 
-        
+
     }
 }

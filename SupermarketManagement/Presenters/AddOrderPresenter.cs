@@ -9,39 +9,34 @@ using System.Threading.Tasks;
 
 namespace SupermarketManagement.Presenters
 {
-    public class AddCashierPresenter
+    public class AddOrderPresenter
     {
-        private IAddCashierView view;
-        private ICashierRepository repository;
-        private Hashing hashing;
+        private IAddOrderView view;
+        private IOrderRepository repository;
 
-        public AddCashierPresenter(IAddCashierView view)
+        public AddOrderPresenter(IAddOrderView view)
         {
             this.view = view ?? throw new ArgumentNullException(nameof(view));
-            this.repository = new CashierRepository();
-            this.hashing = new Hashing();
+            this.repository = new OrderRepository();
         }
 
-        public void addCashier()
+        public void addOrder()
         {
             if (string.IsNullOrWhiteSpace(view.Name) ||
-                string.IsNullOrWhiteSpace(view.Email) ||
-                string.IsNullOrWhiteSpace(view.PhoneNumber) ||
-                string.IsNullOrWhiteSpace(view.Password))
+                string.IsNullOrWhiteSpace(view.amount) ||
+                string.IsNullOrWhiteSpace(view.price))
             {
                 view.ShowMessage("Warning: All fields are required.", "Add Cashier");
                 return;
             }
 
-            var cashier = new CashierModel
+            var order = new OrderModel
             {
                 Name = view.Name,
-                Email = view.Email,
-                PhoneNumber = view.PhoneNumber,
-                Password = hashing.hashPassword(view.Password)
+                
             };
 
-            if (repository.addCashier(cashier))
+            if (repository.addOrder(order))
             {
                 view.CloseForm();
             }

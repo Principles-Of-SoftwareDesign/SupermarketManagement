@@ -7,6 +7,8 @@ namespace SupermarketManagement
 {
     internal static class Program
     {
+        private static ViewCashiers view;
+
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

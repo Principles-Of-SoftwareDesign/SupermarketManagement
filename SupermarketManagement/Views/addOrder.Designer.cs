@@ -57,6 +57,7 @@
             txtprice.Name = "txtprice";
             txtprice.Size = new Size(408, 31);
             txtprice.TabIndex = 27;
+            
             // 
             // priceLabel
             // 
@@ -116,7 +117,6 @@
             Controls.Add(quantityLabel);
             Controls.Add(txtname);
             Controls.Add(name);
-            Name = "addOrder";
             Text = "addOrder";
             ResumeLayout(false);
             PerformLayout();
