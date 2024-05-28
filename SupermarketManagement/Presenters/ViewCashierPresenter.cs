@@ -16,14 +16,15 @@ namespace SupermarketManagement.Presenters
         private IViewCashiers viewCashiers;
         private ICashierRepository cashierRepository;
         private Hashing hashing;
-        private IEnumerable<CashierModel> cashiers;
+        //private IEnumerable<CashierModel> cashiers;
 
 
         public ViewCashierPresenter(IViewCashiers viewCashiers, ICashierRepository cashierRepository)
         {
             this.viewCashiers = viewCashiers;
-            this.hashing = new Hashing();
             this.cashierRepository = cashierRepository;
+            this.hashing = new Hashing();
+            
             this.cashierBindingSource = new BindingSource();
             this.viewCashiers.setCashiersList(cashierBindingSource);
             
@@ -66,22 +67,21 @@ namespace SupermarketManagement.Presenters
         }
 
     
-    public void UpdateCashier()
+        public void UpdateCashier()
         {
             var cashier = new CashierModel
             {
-        
                 Name = viewCashiers.Name,
                 Email = viewCashiers.Email,
-                Password = viewCashiers.Password,
-                PhoneNumber = viewCashiers.PhoneNumber
-
+                PhoneNumber = viewCashiers.PhoneNumber,
+                Password = viewCashiers.Password
             };
 
             if (cashierRepository.UpdateCashier(cashier))
             {
                 viewCashiers.ShowMessage("Record updated successfully!", "Edit Cashier");
                 LoadAllList();
+                viewCashiers.CloseForm();
             }
             else
             {
@@ -96,6 +96,7 @@ namespace SupermarketManagement.Presenters
             {
                 viewCashiers.ShowMessage("Record deleted successfully!", "Delete Cashier");
                 LoadAllList();
+                viewCashiers.CloseForm();
             }
             else
             {

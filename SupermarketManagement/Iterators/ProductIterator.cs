@@ -28,4 +28,5 @@ namespace SupermarketManagement.Iterators
             return collection.GetProducts()[currentIndex++];
         }
     }
+
 }

@@ -1,16 +1,23 @@
-﻿namespace SupermarketManagement.Views
+﻿namespace SupermarketManagement
 {
     partial class ViewProduct
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txt_id;
+        private System.Windows.Forms.TextBox txt_name;
+        private System.Windows.Forms.TextBox txt_category;
+        private System.Windows.Forms.TextBox txt_price;
+        private System.Windows.Forms.TextBox txt_quantity;
+        private System.Windows.Forms.Button btn_add;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.Label lbl_id;
+        private System.Windows.Forms.Label lbl_name;
+        private System.Windows.Forms.Label lbl_category;
+        private System.Windows.Forms.Label lbl_price;
+        private System.Windows.Forms.Label lbl_quantity;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,116 +27,149 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            label2 = new Label();
-            viewProductLabel = new Label();
-            addProductLabel = new Label();
-            label1 = new Label();
-            dataGridViewProduct = new DataGridView();
-            panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewProduct).BeginInit();
-            SuspendLayout();
-            // 
-            // panel1
-            // 
-            panel1.BackColor = SystemColors.HotTrack;
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(viewProductLabel);
-            panel1.Controls.Add(addProductLabel);
-            panel1.Controls.Add(label1);
-            panel1.Location = new Point(-6, -405);
-            panel1.Margin = new Padding(8);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(580, 2025);
-            panel1.TabIndex = 18;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(240, 656);
-            label2.Margin = new Padding(13, 0, 13, 0);
-            label2.Name = "label2";
-            label2.Size = new Size(129, 54);
-            label2.TabIndex = 16;
-            label2.Text = "Home";
-            // 
-            // viewProductLabel
-            // 
-            viewProductLabel.AutoSize = true;
-            viewProductLabel.Font = new Font("Segoe UI", 12F);
-            viewProductLabel.ForeColor = Color.White;
-            viewProductLabel.Location = new Point(172, 1180);
-            viewProductLabel.Margin = new Padding(13, 0, 13, 0);
-            viewProductLabel.Name = "viewProductLabel";
-            viewProductLabel.Size = new Size(274, 54);
-            viewProductLabel.TabIndex = 15;
-            viewProductLabel.Text = "View Products";
-            // 
-            // addProductLabel
-            // 
-            addProductLabel.AutoSize = true;
-            addProductLabel.Font = new Font("Segoe UI", 12F);
-            addProductLabel.ForeColor = Color.White;
-            addProductLabel.Location = new Point(185, 910);
-            addProductLabel.Margin = new Padding(13, 0, 13, 0);
-            addProductLabel.Name = "addProductLabel";
-            addProductLabel.Size = new Size(246, 54);
-            addProductLabel.TabIndex = 14;
-            addProductLabel.Text = "Add Product";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(240, 236);
-            label1.Margin = new Padding(13, 0, 13, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(99, 41);
-            label1.TabIndex = 13;
-            label1.Text = "Home";
-            // 
-            // dataGridViewProduct
-            // 
-            dataGridViewProduct.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewProduct.Location = new Point(617, 88);
-            dataGridViewProduct.Margin = new Padding(6);
-            dataGridViewProduct.Name = "dataGridViewProduct";
-            dataGridViewProduct.RowHeadersWidth = 51;
-            dataGridViewProduct.Size = new Size(1580, 1050);
-            dataGridViewProduct.TabIndex = 19;
-            // 
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.txt_name = new System.Windows.Forms.TextBox();
+            this.txt_category = new System.Windows.Forms.TextBox();
+            this.txt_price = new System.Windows.Forms.TextBox();
+            this.txt_quantity = new System.Windows.Forms.TextBox();
+            this.btn_add = new System.Windows.Forms.Button();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.lbl_id = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
+            this.lbl_category = new System.Windows.Forms.Label();
+            this.lbl_price = new System.Windows.Forms.Label();
+            this.lbl_quantity = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+
+            // dataGridView1
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(300, 20);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(480, 400);
+            this.dataGridView1.TabIndex = 0;
+
+            // txt_id
+            this.txt_id.Location = new System.Drawing.Point(120, 20);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(150, 20);
+            this.txt_id.TabIndex = 1;
+
+            // txt_name
+            this.txt_name.Location = new System.Drawing.Point(120, 60);
+            this.txt_name.Name = "txt_name";
+            this.txt_name.Size = new System.Drawing.Size(150, 20);
+            this.txt_name.TabIndex = 2;
+
+            // txt_category
+            this.txt_category.Location = new System.Drawing.Point(120, 100);
+            this.txt_category.Name = "txt_category";
+            this.txt_category.Size = new System.Drawing.Size(150, 20);
+            this.txt_category.TabIndex = 3;
+
+            // txt_price
+            this.txt_price.Location = new System.Drawing.Point(120, 140);
+            this.txt_price.Name = "txt_price";
+            this.txt_price.Size = new System.Drawing.Size(150, 20);
+            this.txt_price.TabIndex = 4;
+
+            // txt_quantity
+            this.txt_quantity.Location = new System.Drawing.Point(120, 180);
+            this.txt_quantity.Name = "txt_quantity";
+            this.txt_quantity.Size = new System.Drawing.Size(150, 20);
+            this.txt_quantity.TabIndex = 5;
+
+            // btn_add
+            this.btn_add.Location = new System.Drawing.Point(30, 220);
+            this.btn_add.Name = "btn_add";
+            this.btn_add.Size = new System.Drawing.Size(75, 23);
+            this.btn_add.TabIndex = 6;
+            this.btn_add.Text = "Add";
+            this.btn_add.UseVisualStyleBackColor = true;
+
+            // btn_update
+            this.btn_update.Location = new System.Drawing.Point(120, 220);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(75, 23);
+            this.btn_update.TabIndex = 7;
+            this.btn_update.Text = "Update";
+            this.btn_update.UseVisualStyleBackColor = true;
+
+            // btn_delete
+            this.btn_delete.Location = new System.Drawing.Point(210, 220);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 8;
+            this.btn_delete.Text = "Delete";
+            this.btn_delete.UseVisualStyleBackColor = true;
+
+            // lbl_id
+            this.lbl_id.AutoSize = true;
+            this.lbl_id.Location = new System.Drawing.Point(30, 20);
+            this.lbl_id.Name = "lbl_id";
+            this.lbl_id.Size = new System.Drawing.Size(21, 13);
+            this.lbl_id.TabIndex = 9;
+            this.lbl_id.Text = "ID:";
+
+            // lbl_name
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Location = new System.Drawing.Point(30, 60);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(38, 13);
+            this.lbl_name.TabIndex = 10;
+            this.lbl_name.Text = "Name:";
+
+            // lbl_category
+            this.lbl_category.AutoSize = true;
+            this.lbl_category.Location = new System.Drawing.Point(30, 100);
+            this.lbl_category.Name = "lbl_category";
+            this.lbl_category.Size = new System.Drawing.Size(52, 13);
+            this.lbl_category.TabIndex = 11;
+            this.lbl_category.Text = "Category:";
+
+            // lbl_price
+            this.lbl_price.AutoSize = true;
+            this.lbl_price.Location = new System.Drawing.Point(30, 140);
+            this.lbl_price.Name = "lbl_price";
+            this.lbl_price.Size = new System.Drawing.Size(34, 13);
+            this.lbl_price.TabIndex = 12;
+            this.lbl_price.Text = "Price:";
+
+            // lbl_quantity
+            this.lbl_quantity.AutoSize = true;
+            this.lbl_quantity.Location = new System.Drawing.Point(30, 180);
+            this.lbl_quantity.Name = "lbl_quantity";
+            this.lbl_quantity.Size = new System.Drawing.Size(49, 13);
+            this.lbl_quantity.TabIndex = 13;
+            this.lbl_quantity.Text = "Quantity:";
+
             // ViewProduct
-            // 
-            AutoScaleDimensions = new SizeF(17F, 41F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(2247, 1214);
-            Controls.Add(dataGridViewProduct);
-            Controls.Add(panel1);
-            Name = "ViewProduct";
-            Text = "ViewProduct";
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewProduct).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbl_quantity);
+            this.Controls.Add(this.lbl_price);
+            this.Controls.Add(this.lbl_category);
+            this.Controls.Add(this.lbl_name);
+            this.Controls.Add(this.lbl_id);
+            this.Controls.Add(this.btn_delete);
+            this.Controls.Add(this.btn_update);
+            this.Controls.Add(this.btn_add);
+            this.Controls.Add(this.txt_quantity);
+            this.Controls.Add(this.txt_price);
+            this.Controls.Add(this.txt_category);
+            this.Controls.Add(this.txt_name);
+            this.Controls.Add(this.txt_id);
+            this.Controls.Add(this.dataGridView1);
+            this.Name = "ViewProduct";
+            this.Text = "ViewProduct";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
-
-        #endregion
-
-        private Panel panel1;
-        private Label label2;
-        private Label viewProductLabel;
-        private Label addProductLabel;
-        private Label label1;
-        private DataGridView dataGridViewProduct;
     }
 }
