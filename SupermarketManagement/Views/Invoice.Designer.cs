@@ -34,18 +34,20 @@
             // 
             // discountTxt
             // 
-            discountTxt.Location = new Point(218, 194);
+            discountTxt.Location = new Point(463, 398);
+            discountTxt.Margin = new Padding(6, 6, 6, 6);
             discountTxt.Name = "discountTxt";
-            discountTxt.Size = new Size(327, 27);
+            discountTxt.Size = new Size(690, 47);
             discountTxt.TabIndex = 4;
             // 
             // discountBtn
             // 
             discountBtn.BackColor = SystemColors.HotTrack;
             discountBtn.ForeColor = Color.White;
-            discountBtn.Location = new Point(229, 287);
+            discountBtn.Location = new Point(487, 588);
+            discountBtn.Margin = new Padding(6, 6, 6, 6);
             discountBtn.Name = "discountBtn";
-            discountBtn.Size = new Size(316, 76);
+            discountBtn.Size = new Size(672, 156);
             discountBtn.TabIndex = 11;
             discountBtn.Text = "Add discount";
             discountBtn.UseVisualStyleBackColor = false;
@@ -53,11 +55,12 @@
             // 
             // Invoice
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(2776, 1512);
             Controls.Add(discountBtn);
             Controls.Add(discountTxt);
+            Margin = new Padding(6, 6, 6, 6);
             Name = "Invoice";
             Text = "Invoice";
             ResumeLayout(false);

@@ -137,6 +137,29 @@ namespace SupermarketManagement.Views
         {
             presenter.SelectCashier(e.RowIndex, dataGridView1);
         }
+
+        private void numberLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            presenter.addCashier();
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
+            presenter.UpdateCashier();
+
+        }
+
+        private void btn_delete_Click(object sender, EventArgs e)
+        {
+            presenter.DeleteCashier();
+
+        }
     }
 }
 
