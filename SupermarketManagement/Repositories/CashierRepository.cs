@@ -77,6 +77,10 @@ namespace SupermarketManagement.Repositories
             return rowsAffected > 0;
         }
 
+        public IEnumerable<CashierModel> GetAllCashiers()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
 

@@ -17,7 +17,7 @@ namespace SupermarketManagement.Models
 
         public void CalcDiscount()
         {
-            Console.WriteLine($"Percentage discount applied: {DiscountAmount}%");
+            MessageBox.Show($"Percentage discount applied: {DiscountAmount}%");
         }
     }
 }

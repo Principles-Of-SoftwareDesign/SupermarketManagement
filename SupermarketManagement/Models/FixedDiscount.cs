@@ -17,7 +17,7 @@ namespace SupermarketManagement.Models
 
         public void CalcDiscount()
         {
-            Console.WriteLine($"Fixed discount applied: {DiscountAmount}");
+            MessageBox.Show($"Fixed discount applied: {DiscountAmount}");
         }
     }
 }
