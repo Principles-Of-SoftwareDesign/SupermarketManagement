@@ -108,7 +108,6 @@
             passwordTxt.Size = new Size(430, 34);
             passwordTxt.TabIndex = 9;
             passwordTxt.UseSystemPasswordChar = true;
-            passwordTxt.TextChanged += passwordTxt_TextChanged;
             // 
             // passwordLabel
             // 
@@ -126,7 +125,7 @@
             addAdminBtn.BackColor = Color.FromArgb(255, 192, 192);
             addAdminBtn.Font = new Font("Segoe UI Semibold", 14.1F, FontStyle.Bold, GraphicsUnit.Point, 0);
             addAdminBtn.ForeColor = Color.Black;
-            addAdminBtn.Location = new Point(848, 946);
+            addAdminBtn.Location = new Point(326, 826);
             addAdminBtn.Name = "addAdminBtn";
             addAdminBtn.Size = new Size(448, 86);
             addAdminBtn.TabIndex = 10;
@@ -190,6 +189,7 @@
             label6.Size = new Size(124, 38);
             label6.TabIndex = 17;
             label6.Text = "Cashiers";
+            label6.Click += label6_Click;
             // 
             // label5
             // 
@@ -210,7 +210,7 @@
             label4.Size = new Size(155, 38);
             label4.TabIndex = 15;
             label4.Text = "Categories";
-            label4.Click += label4_Click;
+            label4.Click += label4_Click_1;
             // 
             // AddAdminView
             // 
@@ -227,7 +227,6 @@
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            Name = "AddAdminView";
             Text = "Add Admin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

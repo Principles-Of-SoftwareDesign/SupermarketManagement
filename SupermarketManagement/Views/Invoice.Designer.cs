@@ -45,7 +45,7 @@
             // discountTxt
             // 
             discountTxt.Location = new Point(377, 165);
-            discountTxt.Margin = new Padding(1, 1, 1, 1);
+            discountTxt.Margin = new Padding(1);
             discountTxt.Name = "discountTxt";
             discountTxt.Size = new Size(327, 27);
             discountTxt.TabIndex = 4;
@@ -56,7 +56,7 @@
             discountBtn.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             discountBtn.ForeColor = Color.Black;
             discountBtn.Location = new Point(265, 247);
-            discountBtn.Margin = new Padding(1, 1, 1, 1);
+            discountBtn.Margin = new Padding(1);
             discountBtn.Name = "discountBtn";
             discountBtn.Size = new Size(316, 76);
             discountBtn.TabIndex = 11;
@@ -134,6 +134,7 @@
             label3.Size = new Size(110, 38);
             label3.TabIndex = 24;
             label3.Text = "Logout";
+            label3.Click += label3_Click;
             // 
             // label10
             // 
@@ -154,7 +155,7 @@
             Controls.Add(label3);
             Controls.Add(label10);
             Controls.Add(panel2);
-            Margin = new Padding(1, 1, 1, 1);
+            Margin = new Padding(1);
             Name = "Invoice";
             Text = "Invoice";
             panel1.ResumeLayout(false);

@@ -60,6 +60,7 @@
             label9.Size = new Size(189, 38);
             label9.TabIndex = 30;
             label9.Text = "View Admins";
+            label9.Click += label9_Click;
             // 
             // label8
             // 
@@ -70,6 +71,7 @@
             label8.Size = new Size(167, 38);
             label8.TabIndex = 29;
             label8.Text = "Add Admin";
+            label8.Click += label8_Click;
             // 
             // label7
             // 
@@ -80,6 +82,7 @@
             label7.Size = new Size(110, 38);
             label7.TabIndex = 28;
             label7.Text = "Logout";
+            label7.Click += label7_Click;
             // 
             // label6
             // 
@@ -90,6 +93,7 @@
             label6.Size = new Size(124, 38);
             label6.TabIndex = 27;
             label6.Text = "Cashiers";
+            label6.Click += label6_Click;
             // 
             // label5
             // 
@@ -100,6 +104,7 @@
             label5.Size = new Size(132, 38);
             label5.TabIndex = 26;
             label5.Text = "Products";
+            label5.Click += label5_Click;
             // 
             // label4
             // 

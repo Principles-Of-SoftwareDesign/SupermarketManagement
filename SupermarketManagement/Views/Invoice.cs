@@ -19,7 +19,7 @@ namespace SupermarketManagement.Views
         public Invoice()
         {
             InitializeComponent();
-            presenter=new InvoicePresenter(this);
+            presenter = new InvoicePresenter(this);
         }
 
         public Invoice(InvoicePresenter presenter)
@@ -52,6 +52,13 @@ namespace SupermarketManagement.Views
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Hide();
         }
     }
 } 

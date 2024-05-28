@@ -191,7 +191,7 @@
             panel1.Controls.Add(nameLabel);
             panel1.Controls.Add(dataGridView1);
             panel1.Location = new Point(344, 22);
-            panel1.Margin = new Padding(1, 1, 1, 1);
+            panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
             panel1.Size = new Size(913, 684);
             panel1.TabIndex = 29;
@@ -201,7 +201,7 @@
             btn_delete.BackColor = Color.FromArgb(255, 192, 192);
             btn_delete.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_delete.Location = new Point(558, 294);
-            btn_delete.Margin = new Padding(4, 4, 4, 4);
+            btn_delete.Margin = new Padding(4);
             btn_delete.Name = "btn_delete";
             btn_delete.Size = new Size(100, 36);
             btn_delete.TabIndex = 31;
@@ -214,7 +214,7 @@
             btn_add.BackColor = Color.FromArgb(255, 192, 192);
             btn_add.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_add.Location = new Point(244, 294);
-            btn_add.Margin = new Padding(4, 4, 4, 4);
+            btn_add.Margin = new Padding(4);
             btn_add.Name = "btn_add";
             btn_add.Size = new Size(100, 36);
             btn_add.TabIndex = 29;
@@ -227,7 +227,7 @@
             btn_update.BackColor = Color.FromArgb(255, 192, 192);
             btn_update.Font = new Font("Segoe UI Semibold", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btn_update.Location = new Point(409, 294);
-            btn_update.Margin = new Padding(4, 4, 4, 4);
+            btn_update.Margin = new Padding(4);
             btn_update.Name = "btn_update";
             btn_update.Size = new Size(100, 36);
             btn_update.TabIndex = 30;
@@ -244,6 +244,7 @@
             label9.Size = new Size(189, 38);
             label9.TabIndex = 35;
             label9.Text = "View Admins";
+            label9.Click += label9_Click;
             // 
             // label8
             // 
@@ -254,6 +255,7 @@
             label8.Size = new Size(167, 38);
             label8.TabIndex = 34;
             label8.Text = "Add Admin";
+            label8.Click += label8_Click;
             // 
             // label7
             // 
@@ -264,6 +266,7 @@
             label7.Size = new Size(110, 38);
             label7.TabIndex = 33;
             label7.Text = "Logout";
+            label7.Click += label7_Click;
             // 
             // label6
             // 
@@ -274,6 +277,7 @@
             label6.Size = new Size(124, 38);
             label6.TabIndex = 32;
             label6.Text = "Cashiers";
+            label6.Click += label6_Click;
             // 
             // label5
             // 
@@ -284,6 +288,7 @@
             label5.Size = new Size(132, 38);
             label5.TabIndex = 31;
             label5.Text = "Products";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
@@ -311,6 +316,7 @@
             Controls.Add(panel1);
             Name = "ViewCashiers";
             Text = "CashierView";
+            Load += ViewCashiers_Load_1;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

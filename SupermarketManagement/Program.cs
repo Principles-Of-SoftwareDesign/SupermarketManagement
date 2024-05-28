@@ -20,9 +20,8 @@ namespace SupermarketManagement
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
          
-            Application.Run(new addOrder());
-            //Application.Run(new ViewProduct());
-            //Application.Run(new ViewCashiers());
+            Application.Run(new login());
+           
         }
     }
 }

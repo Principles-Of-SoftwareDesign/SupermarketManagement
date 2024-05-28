@@ -1,4 +1,5 @@
-﻿using SupermarketManagement.Repositories;
+﻿using SupermarketManagement.Models;
+using SupermarketManagement.Repositories;
 using SupermarketManagement.Views;
 using System;
 using System.Collections.Generic;
@@ -10,15 +11,17 @@ namespace SupermarketManagement.Presenters
 {
     public class LoginPresenter
     {
-        private readonly ILoginView view;
-        private readonly IUserRepository repository;
-        private readonly Hashing hashing;
+        private ILoginView view;
+        private IUserRepository repository;
+        private Hashing hashing;
+        private UserModel user;
 
         public LoginPresenter(ILoginView view)
         {
             this.view = view ?? throw new ArgumentNullException(nameof(view));
             this.repository = new UserRepository();
             this.hashing = new Hashing();
+            this.user = new UserModel();
         } 
 
         public void Login()

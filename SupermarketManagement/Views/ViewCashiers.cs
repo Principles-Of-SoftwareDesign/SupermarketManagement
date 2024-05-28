@@ -167,6 +167,42 @@ namespace SupermarketManagement.Views
             category.Show();
             this.Hide();
         }
+
+        private void ViewCashiers_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            ViewProduct product = new ViewProduct();
+            product.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            ViewCashiers viewCashiers = new ViewCashiers();
+            viewCashiers.Show();
+            this.Hide();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            ViewAdmins view = new ViewAdmins();
+            view.Show();
+            this.Hide();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+        }
     }
 }
 

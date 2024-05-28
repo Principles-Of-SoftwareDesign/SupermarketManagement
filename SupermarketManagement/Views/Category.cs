@@ -210,14 +210,56 @@ namespace SupermarketManagement
 
         private void label9_Click(object sender, EventArgs e)
         {
-           ViewAdmins viewAdmins = new ViewAdmins();
+            ViewAdmins viewAdmins = new ViewAdmins();
             viewAdmins.Show();
-            this.Hide();    
+            this.Hide();
         }
 
         private void Category_Load_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+            Category category = new Category();
+            category.Show();
+            this.Hide();
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            ViewProduct products = new ViewProduct();
+            products.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            ViewCashiers cashiers = new ViewCashiers();
+            cashiers.Show(); this.Hide();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label9_Click_1(object sender, EventArgs e)
+        {
+            ViewAdmins viewAdmins = new ViewAdmins();
+            viewAdmins.Show(); this.Hide();
+        }
+
+        private void Category_Load_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            login.Close();
         }
     }
 }

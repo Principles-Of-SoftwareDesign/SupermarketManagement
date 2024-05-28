@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle13 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             txt_name = new TextBox();
@@ -97,14 +97,14 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridViewCellStyle13.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = SystemColors.Window;
-            dataGridViewCellStyle13.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle13.ForeColor = Color.Black;
-            dataGridViewCellStyle13.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle13.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle13.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.Location = new Point(0, 267);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -186,7 +186,7 @@
             label4.Size = new Size(155, 38);
             label4.TabIndex = 9;
             label4.Text = "Categories";
-            label4.Click += label4_Click;
+            label4.Click += label4_Click_1;
             // 
             // label5
             // 
@@ -197,7 +197,7 @@
             label5.Size = new Size(132, 38);
             label5.TabIndex = 10;
             label5.Text = "Products";
-            label5.Click += this.label5_Click;
+            label5.Click += label5_Click;
             // 
             // label6
             // 
@@ -208,7 +208,7 @@
             label6.Size = new Size(124, 38);
             label6.TabIndex = 11;
             label6.Text = "Cashiers";
-            label6.Click += this.label6_Click;
+            label6.Click += label6_Click;
             // 
             // label7
             // 
@@ -219,7 +219,7 @@
             label7.Size = new Size(110, 38);
             label7.TabIndex = 12;
             label7.Text = "Logout";
-            label7.Click += this.label7_Click;
+            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -230,7 +230,7 @@
             label8.Size = new Size(167, 38);
             label8.TabIndex = 13;
             label8.Text = "Add Admin";
-            label8.Click += this.label8_Click;
+            label8.Click += label8_Click;
             // 
             // label9
             // 
@@ -241,7 +241,7 @@
             label9.Size = new Size(189, 38);
             label9.TabIndex = 14;
             label9.Text = "View Admins";
-            label9.Click += label9_Click;
+            label9.Click += label9_Click_1;
             // 
             // Category
             // 
@@ -258,7 +258,7 @@
             Controls.Add(panel1);
             Name = "Category";
             Text = "Category";
-            Load += Category_Load_1;
+            Load += Category_Load_2;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

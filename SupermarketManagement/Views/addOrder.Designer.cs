@@ -101,21 +101,21 @@
             panel1.Controls.Add(productLabel);
             panel1.ForeColor = Color.White;
             panel1.Location = new Point(265, 56);
-            panel1.Margin = new Padding(1, 1, 1, 1);
+            panel1.Margin = new Padding(1);
             panel1.Name = "panel1";
             panel1.Size = new Size(990, 629);
             panel1.TabIndex = 29;
-            panel1.Paint += panel1_Paint;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(110, 530);
+            label7.Location = new Point(90, 530);
             label7.Name = "label7";
             label7.Size = new Size(110, 38);
             label7.TabIndex = 31;
             label7.Text = "Logout";
+            label7.Click += label7_Click;
             // 
             // label5
             // 
@@ -136,7 +136,7 @@
             Controls.Add(label7);
             Controls.Add(label5);
             Controls.Add(panel1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "addOrder";
             Text = "addOrder";
             panel1.ResumeLayout(false);

@@ -70,5 +70,38 @@ namespace SupermarketManagement
             category.Show();
             this.Hide();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            ViewProduct viewProduct = new ViewProduct();
+            viewProduct.Show();
+            this.Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            ViewCashiers casheir = new ViewCashiers();
+            casheir.Show();
+            this.Hide();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+            ViewAdmins viewAdmins = new ViewAdmins();
+            viewAdmins.Show();
+            this.Hide();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Hide();
+        }
     }
 }

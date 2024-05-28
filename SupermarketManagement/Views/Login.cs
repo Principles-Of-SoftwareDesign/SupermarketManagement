@@ -28,7 +28,6 @@ namespace SupermarketManagement
         {
             InitializeComponent();
             presenter = new LoginPresenter(this);
-            //txtpassword.PasswordChar = '●';
             this.hashing = new Hashing();
         }
 
@@ -53,7 +52,7 @@ namespace SupermarketManagement
 
         public void OpenCategoryView()
         {
-            Category categoryView = new Category();
+            addOrder categoryView = new addOrder();
             categoryView.Show();
             this.Hide();
         }
@@ -65,9 +64,5 @@ namespace SupermarketManagement
             txtUserName.Focus();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

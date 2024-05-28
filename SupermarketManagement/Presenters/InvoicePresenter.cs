@@ -28,7 +28,9 @@ namespace SupermarketManagement.Presenters
             if (discount != null)
             {
                 discount.CalcDiscount();
-                view.ShowDiscountApplied($"Discount applied: {discount.DiscountAmount}");
+                //view.ShowDiscountApplied($"Discount applied: {discount.DiscountAmount}");
+                addOrder addOrder= new addOrder();
+                addOrder.Show();
             }
             else
             {

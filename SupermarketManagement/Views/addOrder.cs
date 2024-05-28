@@ -64,5 +64,12 @@ namespace SupermarketManagement.Views
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Hide();
+        }
     }
 }
