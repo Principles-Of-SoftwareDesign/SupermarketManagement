@@ -37,12 +37,7 @@
             passwordTxt = new TextBox();
             passwordLabel = new Label();
             addAdminBtn = new Button();
-            AdminNavbar = new TabControl();
-            home = new TabPage();
-            ViewAdmins = new TabPage();
-            adding = new TabPage();
             panel1 = new Panel();
-            AdminNavbar.SuspendLayout();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -133,46 +128,6 @@
             addAdminBtn.UseVisualStyleBackColor = false;
             addAdminBtn.Click += addAdminBtn_Click;
             // 
-            // AdminNavbar
-            // 
-            AdminNavbar.Controls.Add(home);
-            AdminNavbar.Controls.Add(ViewAdmins);
-            AdminNavbar.Controls.Add(adding);
-            AdminNavbar.Dock = DockStyle.Top;
-            AdminNavbar.Location = new Point(0, 0);
-            AdminNavbar.Name = "AdminNavbar";
-            AdminNavbar.SelectedIndex = 0;
-            AdminNavbar.Size = new Size(2777, 47);
-            AdminNavbar.TabIndex = 12;
-            // 
-            // home
-            // 
-            home.Location = new Point(10, 71);
-            home.Name = "home";
-            home.Padding = new Padding(3);
-            home.Size = new Size(2757, 0);
-            home.TabIndex = 1;
-            home.Text = "Home";
-            home.UseVisualStyleBackColor = true;
-            // 
-            // ViewAdmins
-            // 
-            ViewAdmins.Location = new Point(10, 58);
-            ViewAdmins.Name = "ViewAdmins";
-            ViewAdmins.Size = new Size(1633, 0);
-            ViewAdmins.TabIndex = 2;
-            ViewAdmins.Text = "View Admins";
-            ViewAdmins.UseVisualStyleBackColor = true;
-            // 
-            // adding
-            // 
-            adding.Location = new Point(10, 58);
-            adding.Name = "adding";
-            adding.Size = new Size(1633, 0);
-            adding.TabIndex = 3;
-            adding.Text = "Add Admin";
-            adding.UseVisualStyleBackColor = true;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.White;
@@ -197,12 +152,9 @@
             BackColor = Color.Linen;
             ClientSize = new Size(2777, 1510);
             Controls.Add(panel1);
-            Controls.Add(AdminNavbar);
             Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            Name = "AddAdminView";
             Text = "Add Admin";
-            AdminNavbar.ResumeLayout(false);
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -218,10 +170,6 @@
         private TextBox passwordTxt;
         private Label passwordLabel;
         private Button addAdminBtn;
-        private TabControl AdminNavbar;
-        private TabPage home;
-        private TabPage ViewAdmins;
-        private TabPage adding;
         private Panel panel1;
     }
 }

@@ -41,17 +41,16 @@
             // 
             discountTxt.Location = new Point(495, 193);
             discountTxt.Name = "discountTxt";
-            discountTxt.Size = new Size(327, 27);
+            discountTxt.Size = new Size(690, 47);
             discountTxt.TabIndex = 4;
             // 
             // discountBtn
             // 
-            discountBtn.BackColor = Color.FromArgb(255, 192, 192);
-            discountBtn.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            discountBtn.ForeColor = Color.Black;
-            discountBtn.Location = new Point(319, 362);
+            discountBtn.BackColor = SystemColors.HotTrack;
+            discountBtn.ForeColor = Color.White;
+            discountBtn.Location = new Point(229, 287);
             discountBtn.Name = "discountBtn";
-            discountBtn.Size = new Size(316, 76);
+            discountBtn.Size = new Size(672, 156);
             discountBtn.TabIndex = 11;
             discountBtn.Text = "Add discount";
             discountBtn.UseVisualStyleBackColor = false;
@@ -100,13 +99,11 @@
             // 
             // Invoice
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Linen;
-            ClientSize = new Size(1298, 618);
-            Controls.Add(label7);
-            Controls.Add(label5);
-            Controls.Add(panel1);
+            ClientSize = new Size(800, 450);
+            Controls.Add(discountBtn);
+            Controls.Add(discountTxt);
             Name = "Invoice";
             Text = "Invoice";
             panel1.ResumeLayout(false);
