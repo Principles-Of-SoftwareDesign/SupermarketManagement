@@ -37,9 +37,9 @@
             // 
             // addorderBtn
             // 
-            addorderBtn.BackColor = SystemColors.HotTrack;
+            addorderBtn.BackColor = SystemColors.Highlight;
             addorderBtn.ForeColor = Color.White;
-            addorderBtn.Location = new Point(288, 359);
+            addorderBtn.Location = new Point(544, 290);
             addorderBtn.Margin = new Padding(4);
             addorderBtn.Name = "addorderBtn";
             addorderBtn.Size = new Size(181, 60);
@@ -50,7 +50,7 @@
             // 
             // txtQuantity
             // 
-            txtQuantity.Location = new Point(288, 165);
+            txtQuantity.Location = new Point(199, 189);
             txtQuantity.Margin = new Padding(4);
             txtQuantity.Name = "txtQuantity";
             txtQuantity.Size = new Size(408, 31);
@@ -59,7 +59,8 @@
             // quantityLabel
             // 
             quantityLabel.AutoSize = true;
-            quantityLabel.Location = new Point(264, 122);
+            quantityLabel.ForeColor = SystemColors.Highlight;
+            quantityLabel.Location = new Point(49, 189);
             quantityLabel.Margin = new Padding(5, 0, 5, 0);
             quantityLabel.Name = "quantityLabel";
             quantityLabel.Size = new Size(84, 25);
@@ -69,7 +70,7 @@
             // cmbProduct
             // 
             cmbProduct.FormattingEnabled = true;
-            cmbProduct.Location = new Point(288, 74);
+            cmbProduct.Location = new Point(199, 101);
             cmbProduct.Margin = new Padding(4);
             cmbProduct.Name = "cmbProduct";
             cmbProduct.Size = new Size(408, 33);
@@ -78,17 +79,20 @@
             // productLabel
             // 
             productLabel.AutoSize = true;
-            productLabel.Location = new Point(264, 28);
+            productLabel.ForeColor = SystemColors.Highlight;
+            productLabel.Location = new Point(55, 101);
             productLabel.Margin = new Padding(5, 0, 5, 0);
             productLabel.Name = "productLabel";
             productLabel.Size = new Size(78, 25);
             productLabel.TabIndex = 22;
             productLabel.Text = "Product:";
+            productLabel.Click += productLabel_Click;
             // 
             // addOrder
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(800, 450);
             Controls.Add(addorderBtn);
             Controls.Add(txtQuantity);
