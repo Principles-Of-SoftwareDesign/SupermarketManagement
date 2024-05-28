@@ -12,6 +12,7 @@ namespace SupermarketManagement.Repositories
 {
     public class OrderRepository : Repository, IOrderRepository
     {
+        public event Action<string> OrderAdded;
         public bool addOrder(addOrderModel order)
         {
             connection.Open();
@@ -21,7 +22,15 @@ namespace SupermarketManagement.Repositories
             cmd.Parameters.AddWithValue("@TotalPrice", order.TotalPrice);
 
             int rowsAffected = cmd.ExecuteNonQuery();
-            CloseConnection();
+            connection.Close();
+            if (rowsAffected > 0)
+            {
+                // Prepare the message to display
+                string message = $"Order added for {order.Name}, Quantity: {order.Amount}, Total Price: {order.TotalPrice}";
+
+                // Raise the event with the message
+                OrderAdded?.Invoke(message);
+            }
 
             return rowsAffected > 0;
         }

@@ -43,6 +43,10 @@ namespace SupermarketManagement.Presenters
 
             if (repository.addOrder(order))
             {
+                // Display order confirmation message
+                view.ShowMessage($"Order added for {order.Name}, Quantity: {order.Amount}, Total Price: {order.TotalPrice}", "Order Confirmation");
+
+                // Close the form
                 view.CloseForm();
             }
             else
@@ -50,5 +54,6 @@ namespace SupermarketManagement.Presenters
                 view.ShowMessage("Error: No rows were affected.", "Add Order");
             }
         }
+
     }
 }

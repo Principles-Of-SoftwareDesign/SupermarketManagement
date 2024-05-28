@@ -16,6 +16,7 @@ namespace SupermarketManagement.Views
             InitializeComponent();
             presenter = new AddOrderPresenter(this);
             LoadProducts();
+
         }
 
         public string ProductName => cmbProduct.SelectedItem?.ToString() ?? string.Empty;
@@ -51,5 +52,14 @@ namespace SupermarketManagement.Views
         {
             presenter.addOrder();
         }
+        public void ShowOrderConfirmation(string productName, string quantity, decimal totalPrice)
+        {
+            // Display the order confirmation message box
+            MessageBox.Show($"Order added for {productName}, Quantity: {quantity}, Total Price: {totalPrice}",
+                            "Order Confirmation",
+                            MessageBoxButtons.OK,
+                            MessageBoxIcon.Information);
+        }
+
     }
 }

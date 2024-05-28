@@ -20,7 +20,7 @@ namespace SupermarketManagement
             ApplicationConfiguration.Initialize();
          
             //Application.Run(new login());
-            Application.Run(new ViewProduct());
+            Application.Run(new addOrder());
         }
     }
 }
