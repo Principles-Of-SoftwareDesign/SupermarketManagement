@@ -23,6 +23,7 @@ namespace SupermarketManagement
             btn_add.Click += new EventHandler(btn_add_Click);
             btn_update.Click += new EventHandler(btn_update_Click);
             btn_delete.Click += new EventHandler(btn_delete_Click);
+            btn_search.Click += new EventHandler(btn_search_Click);
         }
 
         private void ViewProduct_Load(object sender, EventArgs e)
@@ -74,6 +75,11 @@ namespace SupermarketManagement
             set => txt_quantity.Text = value.ToString();
         }
 
+        public string SearchTerm
+        {
+            get => txt_search.Text;
+        }
+
         public void ClearFields()
         {
             txt_id.Clear();
@@ -101,6 +107,16 @@ namespace SupermarketManagement
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             presenter.SelectProduct(e.RowIndex, dataGridView1);
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btn_search_Click(object sender, EventArgs e)
+        {
+            presenter.SearchProducts(SearchTerm);
         }
     }
 }

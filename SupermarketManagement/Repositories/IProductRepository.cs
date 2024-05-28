@@ -9,5 +9,6 @@ namespace SupermarketManagement.Repositories
         bool UpdateProduct(ProductModel product);
         bool DeleteProduct(int productId);
         IEnumerable<ProductModel> GetAllProducts();
+        IEnumerable<ProductModel> SearchProducts(string searchTerm);
     }
 }
