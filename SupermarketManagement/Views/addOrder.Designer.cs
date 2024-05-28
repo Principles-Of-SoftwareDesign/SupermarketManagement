@@ -92,7 +92,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ButtonFace;
+            BackColor = SystemColors.ButtonHighlight;
             ClientSize = new Size(800, 450);
             Controls.Add(addorderBtn);
             Controls.Add(txtQuantity);
