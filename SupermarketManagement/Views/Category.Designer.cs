@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
             label1 = new Label();
             label2 = new Label();
             txt_name = new TextBox();
@@ -40,7 +40,6 @@
             btn_update = new Button();
             btn_delete = new Button();
             panel1 = new Panel();
-            label3 = new Label();
             label4 = new Label();
             label5 = new Label();
             label6 = new Label();
@@ -98,14 +97,14 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
-            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = SystemColors.Window;
-            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle6.ForeColor = Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Window;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle7;
             dataGridView1.Location = new Point(0, 267);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.ReadOnly = true;
@@ -178,21 +177,11 @@
             panel1.Size = new Size(1152, 614);
             panel1.TabIndex = 8;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(19, 83);
-            label3.Name = "label3";
-            label3.Size = new Size(159, 38);
-            label3.TabIndex = 8;
-            label3.Text = "Dashboard";
-            // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(19, 145);
+            label4.Location = new Point(22, 89);
             label4.Name = "label4";
             label4.Size = new Size(155, 38);
             label4.TabIndex = 9;
@@ -203,7 +192,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(30, 227);
+            label5.Location = new Point(33, 171);
             label5.Name = "label5";
             label5.Size = new Size(132, 38);
             label5.TabIndex = 10;
@@ -213,7 +202,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(30, 311);
+            label6.Location = new Point(33, 255);
             label6.Name = "label6";
             label6.Size = new Size(124, 38);
             label6.TabIndex = 11;
@@ -223,7 +212,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(44, 582);
+            label7.Location = new Point(33, 590);
             label7.Name = "label7";
             label7.Size = new Size(110, 38);
             label7.TabIndex = 12;
@@ -233,7 +222,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(19, 383);
+            label8.Location = new Point(22, 327);
             label8.Name = "label8";
             label8.Size = new Size(167, 38);
             label8.TabIndex = 13;
@@ -243,7 +232,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(12, 474);
+            label9.Location = new Point(15, 418);
             label9.Name = "label9";
             label9.Size = new Size(189, 38);
             label9.TabIndex = 14;
@@ -261,7 +250,6 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(panel1);
             Name = "Category";
             Text = "Category";
@@ -283,7 +271,6 @@
         private Button btn_update;
         private Button btn_delete;
         private Panel panel1;
-        private Label label3;
         private Label label4;
         private Label label5;
         private Label label6;

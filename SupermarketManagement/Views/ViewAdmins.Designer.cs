@@ -35,7 +35,6 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +55,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(55, 420);
+            label9.Location = new Point(40, 409);
             label9.Name = "label9";
             label9.Size = new Size(189, 38);
             label9.TabIndex = 30;
@@ -66,7 +65,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(62, 329);
+            label8.Location = new Point(62, 320);
             label8.Name = "label8";
             label8.Size = new Size(167, 38);
             label8.TabIndex = 29;
@@ -76,7 +75,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(87, 528);
+            label7.Location = new Point(73, 504);
             label7.Name = "label7";
             label7.Size = new Size(110, 38);
             label7.TabIndex = 28;
@@ -86,7 +85,7 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(73, 257);
+            label6.Location = new Point(73, 243);
             label6.Name = "label6";
             label6.Size = new Size(124, 38);
             label6.TabIndex = 27;
@@ -96,7 +95,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(73, 173);
+            label5.Location = new Point(65, 163);
             label5.Name = "label5";
             label5.Size = new Size(132, 38);
             label5.TabIndex = 26;
@@ -106,21 +105,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(62, 91);
+            label4.Location = new Point(62, 85);
             label4.Name = "label4";
             label4.Size = new Size(155, 38);
             label4.TabIndex = 25;
             label4.Text = "Categories";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(62, 29);
-            label3.Name = "label3";
-            label3.Size = new Size(159, 38);
-            label3.TabIndex = 24;
-            label3.Text = "Dashboard";
             // 
             // ViewAdmins
             // 
@@ -134,7 +123,6 @@
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(dataGridView1);
             Font = new Font("Segoe UI", 12F);
             Margin = new Padding(4);
@@ -154,6 +142,5 @@
         private Label label6;
         private Label label5;
         private Label label4;
-        private Label label3;
     }
 }
