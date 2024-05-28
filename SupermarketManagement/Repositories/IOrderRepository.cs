@@ -10,11 +10,8 @@ namespace SupermarketManagement.Repositories
 {
     public interface IOrderRepository
     {
-        bool addOrder(addOrderModel order);
-        List<string> LoadProducts();
+        bool addOrder(OrderModel orderModel);
         decimal GetProductPrice(string productName);
-        bool AddCashier(CashierModel cashierModel);
-
     }
 }
 

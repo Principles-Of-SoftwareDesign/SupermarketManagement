@@ -4,7 +4,7 @@ namespace SupermarketManagement.Models
 {
     namespace SupermarketManagement.Models
     {
-        public class addOrderModel
+        public class OrderModel
         {
             public string Name { get; set; }
             public decimal Amount { get; set; }

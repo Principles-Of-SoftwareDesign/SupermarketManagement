@@ -1,4 +1,5 @@
 ﻿using SupermarketManagement.Models;
+using SupermarketManagement.Models.SupermarketManagement.Models;
 using SupermarketManagement.Views;
 using System;
 using System.Collections.Generic;
@@ -11,22 +12,17 @@ namespace SupermarketManagement.Presenters
     public class InvoicePresenter:IInvoicePresenter
     {
         private readonly IInvoiceView view;
-        private readonly List<ProductModel> products;
+        private readonly List<OrderModel> orders;
         private readonly IDiscountHandlerFactory discountFactory;
 
         public InvoicePresenter(IInvoiceView view, IDiscountHandlerFactory discountFactory)
         {
             this.view = view;
-            products = new List<ProductModel>();
+            orders = new List<OrderModel>();
             this.discountFactory = discountFactory;
         }
 
-        public void CalculateTotalPrice()
-        {
-            double totalPrice = products.Sum(p => p.Price);
-            view.ShowTotalPrice(totalPrice);
-        }
-
+       
         public void ApplyDiscount(string code)
         {
             IDiscount discount = discountFactory.GetDiscount(code);

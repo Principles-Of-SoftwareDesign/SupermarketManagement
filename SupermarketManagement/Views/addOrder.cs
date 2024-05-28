@@ -22,6 +22,7 @@ namespace SupermarketManagement.Views
         public string ProductName => cmbProduct.SelectedItem?.ToString() ?? string.Empty;
         public string Amount => txtQuantity.Text;
 
+
         public void CloseForm()
         {
             cmbProduct.SelectedIndex = -1;
